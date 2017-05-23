@@ -22,7 +22,7 @@ pod "CDCamera"
 
 ## Author
 
-carlos21, cduclos@belatrixsf.com
+carlos21, darkzeratul64@gmail.com
 
 ## License
 

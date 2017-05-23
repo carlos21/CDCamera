@@ -10,6 +10,13 @@
 #endif
 #endif
 
+#import "CALayer+Utils.h"
+#import "CALayer+Visibility.h"
+#import "CDCameraButton.h"
+#import "CDCameraType.h"
+#import "CDCameraViewController.h"
+#import "CDPhotoViewController.h"
+#import "CDVideoViewController.h"
 
 FOUNDATION_EXPORT double CDCameraVersionNumber;
 FOUNDATION_EXPORT const unsigned char CDCameraVersionString[];
