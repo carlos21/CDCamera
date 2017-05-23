@@ -19,5 +19,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "CDCamera/Classes/**/*"
+  "source_files": "CDCamera/Classes/**/*",
+  "resource_bundles": {
+    "CDCamera": [
+      "CDCamera/Assets/*.storyboard"
+    ]
+  }
 }

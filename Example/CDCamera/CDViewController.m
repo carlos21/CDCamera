@@ -7,23 +7,40 @@
 //
 
 #import "CDViewController.h"
+#import <CDCamera/CDCameraViewController.h>
 
-@interface CDViewController ()
+@interface CDViewController () <CDCameraViewControllerDelegate>
 
 @end
 
 @implementation CDViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)showTapped:(id)sender {
+    CDCameraViewController *cameraController = [CDCameraViewController instanceWithType:kCDCameraTypeVideo maxDuration:15.0];
+    cameraController.delegate = self;
+    [cameraController willMoveToParentViewController:self];
+    [self addChildViewController:cameraController];
+    [self.view addSubview:cameraController.view];
+    [cameraController didMoveToParentViewController:self];
+}
+
+#pragma mark - CDCameraViewControllerDelegate
+
+- (void)cameraControllerDidClose:(CDCameraViewController *)controller {
+    [controller removeFromParentViewController];
+    [controller.view removeFromSuperview];
+}
+
+- (void)cameraController:(CDCameraViewController *)controller didSelectVideo:(NSURL *)videoUrl {
+    
+}
+
+- (void)cameraController:(CDCameraViewController *)controller didSelectPhoto:(UIImage *)image {
+    
 }
 
 @end

@@ -32,9 +32,9 @@ A customized camera controller using AVFoundation with a cool button animation a
 
   s.source_files = 'CDCamera/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'CDCamera' => ['CDCamera/Assets/*.png']
-  # }
+  s.resource_bundles = {
+     'CDCamera' => ['CDCamera/Assets/*.storyboard']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
