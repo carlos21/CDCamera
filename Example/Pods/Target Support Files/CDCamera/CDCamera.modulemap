@@ -1,0 +1,6 @@
+framework module CDCamera {
+  umbrella header "CDCamera-umbrella.h"
+
+  export *
+  module * { export * }
+}

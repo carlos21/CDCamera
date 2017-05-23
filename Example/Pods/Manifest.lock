@@ -1,0 +1,16 @@
+PODS:
+  - CDCamera (0.1.0)
+
+DEPENDENCIES:
+  - CDCamera (from `../`)
+
+EXTERNAL SOURCES:
+  CDCamera:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CDCamera: 71b0f7b07ee20a8916bd50a2ec1064cd478bbfdb
+
+PODFILE CHECKSUM: 3c76d6fb801738e8bb087a8ad4728965488a4746
+
+COCOAPODS: 1.2.1

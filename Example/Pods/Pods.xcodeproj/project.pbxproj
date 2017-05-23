@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0312D503612204CD2FA877059C9E887C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1C62FA6E5FEF4976FF6A996A400E9F21 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = C7922D13573A85EF55D653AF65C78D6C /* ReplaceMe.m */; };
+		332EAA3939C0463D470F489E2C7165BB /* CDCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E70EA0F613ACA5F8185CB9A42131735 /* CDCamera-dummy.m */; };
+		3DEE2FE68F70A9A6C84B78E75382833E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		74867DFBF8A5BF41B42A01BB2502982E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A243A5482F72C5BFE8CF48196AE926D5 /* CDCamera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB8CD7B69253D5524FF3235F931CFD1 /* CDCamera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD5A6E23A1B8412C2194388BD9BC3EDA /* Pods-CDCamera_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA28D7D3C40481A89565596732D2E7A /* Pods-CDCamera_Example-dummy.m */; };
+		B213A2D18C1A387C1323F03335AFE18B /* Pods-CDCamera_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1716CA342CD3C648B6CB6E27E7A53A5 /* Pods-CDCamera_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B238A777C58CA43CE1F00E45E6D97457 /* Pods-CDCamera_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 300EFE3A89D4AF39DE9BBA5CD7D8C831 /* Pods-CDCamera_Tests-dummy.m */; };
+		D346D641D7859059B3BC80FDF55AA472 /* Pods-CDCamera_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C368474403760B91CF41ADD720E5E8C9 /* Pods-CDCamera_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21D3F1791FF099F6E74006FAD47A78D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45E0EEEF63C583534F120599E19D70C6;
+			remoteInfo = CDCamera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BC0B203D1DAE0BBA2CFD27FFA249CB2 /* Pods-CDCamera_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDCamera_Example-frameworks.sh"; sourceTree = "<group>"; };
+		0DEC926DC7590C378261F8F6646BA648 /* Pods_CDCamera_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CDCamera_Tests.framework; path = "Pods-CDCamera_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C230C8238804C8BABC48B97AE63C8E1 /* Pods-CDCamera_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDCamera_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		234A70B5DBB075430DB5B81E701EB446 /* Pods-CDCamera_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CDCamera_Tests.modulemap"; sourceTree = "<group>"; };
+		294818DCC41DAA86272E75EC12630168 /* Pods-CDCamera_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDCamera_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2EA28D7D3C40481A89565596732D2E7A /* Pods-CDCamera_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CDCamera_Example-dummy.m"; sourceTree = "<group>"; };
+		300EFE3A89D4AF39DE9BBA5CD7D8C831 /* Pods-CDCamera_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CDCamera_Tests-dummy.m"; sourceTree = "<group>"; };
+		36839FDDFEDD939D5EA9E946D2CE5A8D /* Pods-CDCamera_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDCamera_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3FC095E82B71D7461A96B2485AF438B2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47425AFA2EB214ABA45742B6087EA476 /* Pods-CDCamera_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CDCamera_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4E70EA0F613ACA5F8185CB9A42131735 /* CDCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDCamera-dummy.m"; sourceTree = "<group>"; };
+		53390F65B73EC94F697D8A66311172AB /* Pods-CDCamera_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDCamera_Example-resources.sh"; sourceTree = "<group>"; };
+		6314E556CDD62627D12C37B628EB7545 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6E21C40E76641300BF1D63ABC7D0E9E8 /* CDCamera-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDCamera-prefix.pch"; sourceTree = "<group>"; };
+		71E58CDFFCE25A7D77915D70B1CAA894 /* CDCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CDCamera.framework; path = CDCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B86E111B5E97FADD22E385E2F73393C /* Pods-CDCamera_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDCamera_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		8084311DA2409D23755C2ECB7E5BAF49 /* Pods-CDCamera_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDCamera_Tests-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A28EE13C054E971F3D3211F011D82952 /* Pods_CDCamera_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CDCamera_Example.framework; path = "Pods-CDCamera_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB455F8CC4499441818E7348BE770F5D /* Pods-CDCamera_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CDCamera_Example.modulemap"; sourceTree = "<group>"; };
+		C368474403760B91CF41ADD720E5E8C9 /* Pods-CDCamera_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CDCamera_Example-umbrella.h"; sourceTree = "<group>"; };
+		C7922D13573A85EF55D653AF65C78D6C /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		DCB8CD7B69253D5524FF3235F931CFD1 /* CDCamera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDCamera-umbrella.h"; sourceTree = "<group>"; };
+		DE823EA1DFFBDD70F640CCDD63A968DE /* Pods-CDCamera_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDCamera_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E1716CA342CD3C648B6CB6E27E7A53A5 /* Pods-CDCamera_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CDCamera_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E9C5CDEC790A35797B737C141A351F35 /* Pods-CDCamera_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDCamera_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EB9D88918DB6FB7CD272378EDBA42B5E /* Pods-CDCamera_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDCamera_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EC60AF673C63B993CDE27513DCA1414E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F49A68091156979FF072FA11B84AB447 /* Pods-CDCamera_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CDCamera_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		FCFDA4B38CC5FBF7348842D62B2C2742 /* CDCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CDCamera.modulemap; sourceTree = "<group>"; };
+		FCFFE6BDFE02391E350E9AABA66EE132 /* CDCamera.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDCamera.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD81F4A5878AF41CD137D909F0B7A7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DEE2FE68F70A9A6C84B78E75382833E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		929E779E12927B0E4076CACF20F59A65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74867DFBF8A5BF41B42A01BB2502982E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC796B7033BF16B3989E4065B617476 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0312D503612204CD2FA877059C9E887C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20538217A3DD014EDDEE030F78878BDC /* CDCamera */ = {
+			isa = PBXGroup;
+			children = (
+				E651732E4B84FD1F5749858F7395DD5B /* Classes */,
+			);
+			name = CDCamera;
+			path = CDCamera;
+			sourceTree = "<group>";
+		};
+		2D24A799456F1E3928893A754AD3EED3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71E58CDFFCE25A7D77915D70B1CAA894 /* CDCamera.framework */,
+				A28EE13C054E971F3D3211F011D82952 /* Pods_CDCamera_Example.framework */,
+				0DEC926DC7590C378261F8F6646BA648 /* Pods_CDCamera_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BF4544F5A040E9CC8A66378A8B948F0 /* Pods-CDCamera_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3FC095E82B71D7461A96B2485AF438B2 /* Info.plist */,
+				234A70B5DBB075430DB5B81E701EB446 /* Pods-CDCamera_Tests.modulemap */,
+				EB9D88918DB6FB7CD272378EDBA42B5E /* Pods-CDCamera_Tests-acknowledgements.markdown */,
+				47425AFA2EB214ABA45742B6087EA476 /* Pods-CDCamera_Tests-acknowledgements.plist */,
+				300EFE3A89D4AF39DE9BBA5CD7D8C831 /* Pods-CDCamera_Tests-dummy.m */,
+				7B86E111B5E97FADD22E385E2F73393C /* Pods-CDCamera_Tests-frameworks.sh */,
+				8084311DA2409D23755C2ECB7E5BAF49 /* Pods-CDCamera_Tests-resources.sh */,
+				E1716CA342CD3C648B6CB6E27E7A53A5 /* Pods-CDCamera_Tests-umbrella.h */,
+				DE823EA1DFFBDD70F640CCDD63A968DE /* Pods-CDCamera_Tests.debug.xcconfig */,
+				1C230C8238804C8BABC48B97AE63C8E1 /* Pods-CDCamera_Tests.release.xcconfig */,
+			);
+			name = "Pods-CDCamera_Tests";
+			path = "Target Support Files/Pods-CDCamera_Tests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				F32E713006C464B72F5CEE89E5D7FD06 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				2D24A799456F1E3928893A754AD3EED3 /* Products */,
+				C1BD1CC4EA9DEFD1B21FA35F2E9268B2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B99A9F09F2DF80069CB330B243EFC135 /* Pods-CDCamera_Example */ = {
+			isa = PBXGroup;
+			children = (
+				6314E556CDD62627D12C37B628EB7545 /* Info.plist */,
+				BB455F8CC4499441818E7348BE770F5D /* Pods-CDCamera_Example.modulemap */,
+				36839FDDFEDD939D5EA9E946D2CE5A8D /* Pods-CDCamera_Example-acknowledgements.markdown */,
+				F49A68091156979FF072FA11B84AB447 /* Pods-CDCamera_Example-acknowledgements.plist */,
+				2EA28D7D3C40481A89565596732D2E7A /* Pods-CDCamera_Example-dummy.m */,
+				0BC0B203D1DAE0BBA2CFD27FFA249CB2 /* Pods-CDCamera_Example-frameworks.sh */,
+				53390F65B73EC94F697D8A66311172AB /* Pods-CDCamera_Example-resources.sh */,
+				C368474403760B91CF41ADD720E5E8C9 /* Pods-CDCamera_Example-umbrella.h */,
+				E9C5CDEC790A35797B737C141A351F35 /* Pods-CDCamera_Example.debug.xcconfig */,
+				294818DCC41DAA86272E75EC12630168 /* Pods-CDCamera_Example.release.xcconfig */,
+			);
+			name = "Pods-CDCamera_Example";
+			path = "Target Support Files/Pods-CDCamera_Example";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1BD1CC4EA9DEFD1B21FA35F2E9268B2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B99A9F09F2DF80069CB330B243EFC135 /* Pods-CDCamera_Example */,
+				4BF4544F5A040E9CC8A66378A8B948F0 /* Pods-CDCamera_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DFB8BA161E05E676741A99E8D629F2FA /* CDCamera */ = {
+			isa = PBXGroup;
+			children = (
+				20538217A3DD014EDDEE030F78878BDC /* CDCamera */,
+				ECB2F7BE4F82A8DE7775A624B87A4B33 /* Support Files */,
+			);
+			name = CDCamera;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E651732E4B84FD1F5749858F7395DD5B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C7922D13573A85EF55D653AF65C78D6C /* ReplaceMe.m */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		ECB2F7BE4F82A8DE7775A624B87A4B33 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCFDA4B38CC5FBF7348842D62B2C2742 /* CDCamera.modulemap */,
+				FCFFE6BDFE02391E350E9AABA66EE132 /* CDCamera.xcconfig */,
+				4E70EA0F613ACA5F8185CB9A42131735 /* CDCamera-dummy.m */,
+				6E21C40E76641300BF1D63ABC7D0E9E8 /* CDCamera-prefix.pch */,
+				DCB8CD7B69253D5524FF3235F931CFD1 /* CDCamera-umbrella.h */,
+				EC60AF673C63B993CDE27513DCA1414E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CDCamera";
+			sourceTree = "<group>";
+		};
+		F32E713006C464B72F5CEE89E5D7FD06 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFB8BA161E05E676741A99E8D629F2FA /* CDCamera */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4E28819C528C4C5B05AA0D619265E2B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D346D641D7859059B3BC80FDF55AA472 /* Pods-CDCamera_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9777FEBF48789DF0215142DFA9D35A6C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A243A5482F72C5BFE8CF48196AE926D5 /* CDCamera-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55D65B3BFF67911FE3A07299E2EA5FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B213A2D18C1A387C1323F03335AFE18B /* Pods-CDCamera_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		45E0EEEF63C583534F120599E19D70C6 /* CDCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 545059A67C3A2B083F9C4E5EB9F877B2 /* Build configuration list for PBXNativeTarget "CDCamera" */;
+			buildPhases = (
+				C71B67E2541B277EED8ECDA89B042E70 /* Sources */,
+				929E779E12927B0E4076CACF20F59A65 /* Frameworks */,
+				9777FEBF48789DF0215142DFA9D35A6C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CDCamera;
+			productName = CDCamera;
+			productReference = 71E58CDFFCE25A7D77915D70B1CAA894 /* CDCamera.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B755CAD525D89748BC119AF2946DC861 /* Pods-CDCamera_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F5B5A50DD7E1C10EAECD21FD41D1D79 /* Build configuration list for PBXNativeTarget "Pods-CDCamera_Example" */;
+			buildPhases = (
+				989E354B886EBF6D5C6B95A44D58671D /* Sources */,
+				8DD81F4A5878AF41CD137D909F0B7A7D /* Frameworks */,
+				4E28819C528C4C5B05AA0D619265E2B2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEF736531D737472628315FA8F474F0B /* PBXTargetDependency */,
+			);
+			name = "Pods-CDCamera_Example";
+			productName = "Pods-CDCamera_Example";
+			productReference = A28EE13C054E971F3D3211F011D82952 /* Pods_CDCamera_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F6D9C4279C87B8C327385C15F16FC2EF /* Pods-CDCamera_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53A8515190B410F7444E201F709EA8F7 /* Build configuration list for PBXNativeTarget "Pods-CDCamera_Tests" */;
+			buildPhases = (
+				EFA6A523CC54313653165767194164BD /* Sources */,
+				EAC796B7033BF16B3989E4065B617476 /* Frameworks */,
+				F55D65B3BFF67911FE3A07299E2EA5FE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CDCamera_Tests";
+			productName = "Pods-CDCamera_Tests";
+			productReference = 0DEC926DC7590C378261F8F6646BA648 /* Pods_CDCamera_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2D24A799456F1E3928893A754AD3EED3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45E0EEEF63C583534F120599E19D70C6 /* CDCamera */,
+				B755CAD525D89748BC119AF2946DC861 /* Pods-CDCamera_Example */,
+				F6D9C4279C87B8C327385C15F16FC2EF /* Pods-CDCamera_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		989E354B886EBF6D5C6B95A44D58671D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD5A6E23A1B8412C2194388BD9BC3EDA /* Pods-CDCamera_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C71B67E2541B277EED8ECDA89B042E70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332EAA3939C0463D470F489E2C7165BB /* CDCamera-dummy.m in Sources */,
+				1C62FA6E5FEF4976FF6A996A400E9F21 /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA6A523CC54313653165767194164BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B238A777C58CA43CE1F00E45E6D97457 /* Pods-CDCamera_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEF736531D737472628315FA8F474F0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CDCamera;
+			target = 45E0EEEF63C583534F120599E19D70C6 /* CDCamera */;
+			targetProxy = 21D3F1791FF099F6E74006FAD47A78D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		35B6E2F01A273B582D76097C850551C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C230C8238804C8BABC48B97AE63C8E1 /* Pods-CDCamera_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CDCamera_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CDCamera_Tests/Pods-CDCamera_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CDCamera_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6B1F4BAA9487464FEA89251FAFFE50EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE823EA1DFFBDD70F640CCDD63A968DE /* Pods-CDCamera_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CDCamera_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CDCamera_Tests/Pods-CDCamera_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CDCamera_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6B5D8F4EC30A7B25B16904BF6E145D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCFFE6BDFE02391E350E9AABA66EE132 /* CDCamera.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CDCamera/CDCamera-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDCamera/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CDCamera/CDCamera.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CDCamera;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BB9ECFCA4B70475039336BE88FCDAD82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCFFE6BDFE02391E350E9AABA66EE132 /* CDCamera.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CDCamera/CDCamera-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDCamera/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CDCamera/CDCamera.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CDCamera;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E50179AC3BDC566948CFD85CF55375C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9C5CDEC790A35797B737C141A351F35 /* Pods-CDCamera_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CDCamera_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CDCamera_Example/Pods-CDCamera_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CDCamera_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F10A5198302BA6ACDA92C4C4B5C63993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294818DCC41DAA86272E75EC12630168 /* Pods-CDCamera_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CDCamera_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CDCamera_Example/Pods-CDCamera_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CDCamera_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53A8515190B410F7444E201F709EA8F7 /* Build configuration list for PBXNativeTarget "Pods-CDCamera_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B1F4BAA9487464FEA89251FAFFE50EB /* Debug */,
+				35B6E2F01A273B582D76097C850551C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		545059A67C3A2B083F9C4E5EB9F877B2 /* Build configuration list for PBXNativeTarget "CDCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB9ECFCA4B70475039336BE88FCDAD82 /* Debug */,
+				A6B5D8F4EC30A7B25B16904BF6E145D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F5B5A50DD7E1C10EAECD21FD41D1D79 /* Build configuration list for PBXNativeTarget "Pods-CDCamera_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E50179AC3BDC566948CFD85CF55375C5 /* Debug */,
+				F10A5198302BA6ACDA92C4C4B5C63993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

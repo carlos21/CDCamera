@@ -1,0 +1,22 @@
+{
+  "name": "CDCamera",
+  "version": "0.1.0",
+  "summary": "A short description of CDCamera.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/carlos21/CDCamera",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "carlos21": "cduclos@belatrixsf.com"
+  },
+  "source": {
+    "git": "https://github.com/carlos21/CDCamera.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CDCamera/Classes/**/*"
+}
