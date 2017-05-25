@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'CDCamera'
   s.version          = '0.1.0'
   s.summary          = 'A customized camera controller using AVFoundation'
-  s.resources        = 'CDCamera/Assets/*'
+  s.resources        = 'Resources/CDCamera/Assets/*'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -33,7 +33,7 @@ A customized camera controller using AVFoundation with a cool button animation a
   s.source_files = 'CDCamera/Classes/**/*'
   
   s.resource_bundles = {
-     'CDCamera' => ['CDCamera/Assets/*.storyboard']
+     'CDCamera' => ['Resources/CDCamera/Assets/*.storyboard']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
