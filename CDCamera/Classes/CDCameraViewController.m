@@ -483,7 +483,7 @@ static NSString *kStoryboardName = @"CDCamera";
 #pragma mark - Public
 
 + (instancetype)instanceWithType:(kCDCameraType)type maxDuration:(CGFloat)maxDuration {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kStoryboardName bundle:[NSBundle mainBundle]];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kStoryboardName bundle:[NSBundle bundleForClass:[CDCameraViewController class]]];
     CDCameraViewController *cameraController = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CDCameraViewController class])];
     cameraController.type = type;
     cameraController.maxDuration = maxDuration;
