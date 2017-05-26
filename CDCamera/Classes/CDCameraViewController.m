@@ -89,7 +89,9 @@ static NSString *kStoryboardName = @"CDCamera";
 - (void)setUseFlash:(BOOL)useFlash {
     _useFlash = useFlash;
     NSString *imageName = _useFlash ? @"flash" : @"flashOutline";
-    [self.toggleButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    NSBundle *bundle = [NSBundle bundleForClass:[CDCameraViewController class]];
+    UIImage *image = [UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil];
+    [self.toggleButton setImage:image forState:UIControlStateNormal];
 }
 
 #pragma mark - Actions
@@ -151,12 +153,13 @@ static NSString *kStoryboardName = @"CDCamera";
     self.previewLayer.frame = self.previewView.frame;
     [self.previewView.layer insertSublayer:self.previewLayer atIndex:0];
     
+    NSBundle *bundle = [NSBundle bundleForClass:[CDCameraViewController class]];
     switch (self.type) {
         case kCDCameraTypePhoto:
-            self.instructionsLabel.text = NSLocalizedString(@"camera_instructions_tap", @"");
+            self.instructionsLabel.text = NSLocalizedStringFromTableInBundle(@"camera_instructions_tap", nil, bundle, @"");
             break;
         case kCDCameraTypeVideo:
-            self.instructionsLabel.text = NSLocalizedString(@"camera_instructions_press_and_hold", @"");
+            self.instructionsLabel.text = NSLocalizedStringFromTableInBundle(@"camera_instructions_press_and_hold", nil, bundle, @"");
             break;
     }
 }
