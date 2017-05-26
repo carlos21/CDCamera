@@ -6,7 +6,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   CDCamera:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   CDCamera: 9be18cee7c4283a6c51e926d60f5c6ea494fcbb3
