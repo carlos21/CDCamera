@@ -17,12 +17,11 @@ static NSString *kStoryboardName = @"CDCamera";
 
 @interface CDCameraViewController ()<AVCaptureFileOutputRecordingDelegate, CDCameraButtonDelegate, CDVideoViewControllerDelegate, CDPhotoViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIView *previewView;
 @property (weak, nonatomic) IBOutlet CDCameraButton *cameraButton;
-@property (weak, nonatomic) IBOutlet UIButton *toggleButton;
-@property (weak, nonatomic) IBOutlet UIButton *flashButton;
+@property (weak, nonatomic) IBOutlet UIView *previewView;
+@property (weak, nonatomic) IBOutlet UIButton *toggleCameraButton;
+@property (weak, nonatomic) IBOutlet UIButton *toggleFlashButton;
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
-
 @property (weak, nonatomic) IBOutlet UILabel *instructionsLabel;
 
 @property (assign, nonatomic, readonly) AVCaptureVideoOrientation previewLayerOrientation;
@@ -44,6 +43,8 @@ static NSString *kStoryboardName = @"CDCamera";
 
 @property (nonatomic, assign) NSUInteger maxDuration;
 @property (nonatomic, assign) kCDCameraType type;
+
+@property (nonatomic, assign) CGFloat zoomScale;
 
 @end
 
@@ -68,7 +69,33 @@ static NSString *kStoryboardName = @"CDCamera";
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    self.previewLayer.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
+        UIDevice *device = [UIDevice currentDevice];
+        AVCaptureConnection *connection = self.previewLayer.connection;
+        
+        if (connection.supportsVideoOrientation) {
+            switch (device.orientation) {
+                case UIDeviceOrientationLandscapeRight:
+                    [self updatePreviewLayer:AVCaptureVideoOrientationLandscapeLeft];
+                    break;
+                case UIDeviceOrientationLandscapeLeft:
+                    [self updatePreviewLayer:AVCaptureVideoOrientationLandscapeRight];
+                    break;
+                case UIDeviceOrientationPortraitUpsideDown:
+                    [self updatePreviewLayer:AVCaptureVideoOrientationPortraitUpsideDown];
+                    break;
+                default:
+                    [self updatePreviewLayer:AVCaptureVideoOrientationPortrait];
+                    break;
+            }
+        }
+    } completion:^(id  _Nonnull context) {
+        
+    }];
 }
 
 - (void)dealloc {
@@ -91,7 +118,13 @@ static NSString *kStoryboardName = @"CDCamera";
     NSString *imageName = _useFlash ? @"flash" : @"flashOutline";
     NSBundle *bundle = [NSBundle bundleForClass:[CDCameraViewController class]];
     UIImage *image = [UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil];
-    [self.toggleButton setImage:image forState:UIControlStateNormal];
+    [self.toggleFlashButton setImage:image forState:UIControlStateNormal];
+}
+
+#pragma mark - Override
+
+- (BOOL)shouldAutorotate {
+    return !self.movieFileOutput.isRecording;
 }
 
 #pragma mark - Actions
@@ -104,6 +137,7 @@ static NSString *kStoryboardName = @"CDCamera";
 
 - (IBAction)toggleCameraTapped:(id)sender {
     self.useFrontCamera = !self.useFrontCamera;
+    self.toggleFlashButton.enabled = !self.useFrontCamera;
     [self.session stopRunning];
     
     dispatch_async(self.sessionQueue, ^{
@@ -120,48 +154,58 @@ static NSString *kStoryboardName = @"CDCamera";
     self.useFlash = !self.useFlash;
 }
 
-//- (IBAction)toggleFlashTapped:(id)sender {
-//    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-//    if (device.hasTorch) {
-//        NSError *error = nil;
-//        [device lockForConfiguration:&error];
-//        
-//        if (!error) {
-//            if (device.torchMode == AVCaptureTorchModeOn) {
-//                device.torchMode = AVCaptureTorchModeOff;
-//                self.useFlash = NO;
-//            } else {
-//                [device setTorchModeOnWithLevel:1.0 error:&error];
-//                
-//                if (!error) {
-//                    self.useFlash = YES;
-//                } else {
-//                    NSLog(@"Error: %@", error.localizedDescription);
-//                }
-//            }
-//            [device unlockForConfiguration];
-//        } else {
-//            NSLog(@"Error: %@", error.localizedDescription);
-//        }
-//    }
-//}
+- (void)zoomGestureEvent:(UIPinchGestureRecognizer *)gesture {
+    if (self.useFrontCamera || !self.videoDevice) {
+        return;
+    }
+    
+    NSError *error = nil;
+    [self.videoDevice lockForConfiguration:&error];
+    
+    switch (gesture.state) {
+        case UIGestureRecognizerStateBegan:
+            self.zoomScale = self.videoDevice.videoZoomFactor;
+            break;
+        case UIGestureRecognizerStateChanged: {
+            CGFloat factor = self.zoomScale * gesture.scale;
+            factor = MAX(1.0, MIN(factor, self.videoDevice.activeFormat.videoMaxZoomFactor));
+            self.videoDevice.videoZoomFactor = factor;
+            break;
+        }
+        default:
+            break;
+    }
+    
+    [self.videoDevice unlockForConfiguration];
+}
 
 #pragma mark - Private
 
 - (void)setupView {
+    NSBundle *bundle = [NSBundle bundleForClass:[CDCameraViewController class]];
+    UIImage *imageDisabled = [UIImage imageNamed:@"" inBundle:bundle compatibleWithTraitCollection:nil];
+    [self.toggleFlashButton setImage:imageDisabled forState:UIControlStateDisabled];
+    self.view.backgroundColor = [UIColor redColor];
+    
     self.previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
-    self.previewLayer.frame = self.previewView.frame;
+    self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    self.previewLayer.frame = self.view.frame;
     [self.previewView.layer insertSublayer:self.previewLayer atIndex:0];
     
-    NSBundle *bundle = [NSBundle bundleForClass:[CDCameraViewController class]];
+    self.zoomScale = 1.0;
+    
     switch (self.type) {
         case kCDCameraTypePhoto:
-            self.instructionsLabel.text = NSLocalizedStringFromTableInBundle(@"camera_instructions_tap", nil, bundle, @"");
+            self.instructionsLabel.text = NSLocalizedStringFromTableInBundle(@"camera_instructions_tap", @"CDCamera", bundle, @"");
             break;
         case kCDCameraTypeVideo:
-            self.instructionsLabel.text = NSLocalizedStringFromTableInBundle(@"camera_instructions_press_and_hold", nil, bundle, @"");
+            self.instructionsLabel.text = NSLocalizedStringFromTableInBundle(@"camera_instructions_press_and_hold", @"CDCamera", bundle, @"");
             break;
     }
+    
+    UIPinchGestureRecognizer *zoomGesture = [UIPinchGestureRecognizer new];
+    [zoomGesture addTarget:self action:@selector(zoomGestureEvent:)];
+    [self.view addGestureRecognizer:zoomGesture];
 }
 
 - (void)setupSession {
@@ -181,6 +225,11 @@ static NSString *kStoryboardName = @"CDCamera";
     self.cameraButton.delegate = self;
     self.cameraButton.maxDuration = self.maxDuration;
     self.cameraButton.type = self.type;
+}
+
+- (void)updatePreviewLayer:(AVCaptureVideoOrientation)videoOrientation {
+    self.previewLayer.connection.videoOrientation = videoOrientation;
+    self.previewLayer.frame = self.view.bounds;
 }
 
 - (void)deviceDidRotate:(NSNotification *)notification {
@@ -385,8 +434,8 @@ static NSString *kStoryboardName = @"CDCamera";
     [UIView animateWithDuration:0.2 animations:^{
         self.closeButton.alpha = newAlpha;
         self.instructionsLabel.alpha = newAlpha;
-        self.flashButton.alpha = newAlpha;
-        self.toggleButton.alpha = newAlpha;
+        self.toggleCameraButton.alpha = newAlpha;
+        self.toggleFlashButton.alpha = newAlpha;
     }];
 }
 
@@ -412,6 +461,26 @@ static NSString *kStoryboardName = @"CDCamera";
     }];
 }
 
+- (void)enableFlash:(BOOL)flag {
+    if (self.useFrontCamera || !self.videoDevice) {
+        return;
+    }
+    
+    if (self.videoDevice.hasTorch) {
+        NSError *error = nil;
+        [self.videoDevice lockForConfiguration:&error];
+        
+        if (flag) {
+            self.videoDevice.torchMode = AVCaptureTorchModeOn;
+            [self.videoDevice setTorchModeOnWithLevel:1.0 error:&error];
+        } else {
+            self.videoDevice.torchMode = AVCaptureTorchModeOff;
+        }
+        
+        [self.videoDevice unlockForConfiguration];
+    }
+}
+
 - (void)startRecording {
     dispatch_async(self.sessionQueue, ^{
         if (self.movieFileOutput.isRecording) {
@@ -429,6 +498,8 @@ static NSString *kStoryboardName = @"CDCamera";
         NSString *outputFilePath = [[NSTemporaryDirectory() stringByAppendingPathComponent:outputFilename] stringByAppendingPathExtension:@"mov"];
         NSURL *outputURL = [NSURL fileURLWithPath:outputFilePath];
         [self.movieFileOutput startRecordingToOutputFileURL:outputURL recordingDelegate:self];
+        
+        [self enableFlash:self.useFlash];
     });
 }
 
@@ -500,6 +571,8 @@ static NSString *kStoryboardName = @"CDCamera";
 }
 
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error {
+    [self enableFlash:NO];
+    
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self showVideoController:outputFileURL];
     }];

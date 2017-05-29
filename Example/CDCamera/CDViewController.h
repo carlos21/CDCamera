@@ -8,7 +8,8 @@
 
 @import UIKit;
 
-
 @interface CDViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *customLabel;
 
 @end

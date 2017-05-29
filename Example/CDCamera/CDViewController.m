@@ -17,10 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.customLabel.text = NSLocalizedString(@"test_key", @"test");
 }
 
 - (IBAction)showTapped:(id)sender {
-    CDCameraViewController *cameraController = [CDCameraViewController instanceWithType:kCDCameraTypeVideo maxDuration:15.0];
+    CDCameraViewController *cameraController = [CDCameraViewController instanceWithType:kCDCameraTypePhoto maxDuration:15.0];
     cameraController.delegate = self;
     [cameraController willMoveToParentViewController:self];
     [self addChildViewController:cameraController];

@@ -16,3 +16,6 @@
 
 /* Class = "UIButton"; normalTitle = "Elegir"; ObjectID = "zV7-3s-diq"; */
 "zV7-3s-diq.normalTitle" = "Elegir";
+
+"camera_instructions_press_and_hold" = "Mantén presionado para empezar a grabar.";
+"camera_instructions_tap"            = "Haz un tap para tomar una foto.";

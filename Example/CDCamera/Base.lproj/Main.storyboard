@@ -35,13 +35,24 @@
                                     <action selector="showTapped:" destination="whP-gf-Uak" eventType="touchUpInside" id="zty-EB-Wv4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKy-3p-jwj">
+                                <rect key="frame" x="166" y="250" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7DV-1f-mDK" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Bee-m2-hac"/>
                             <constraint firstItem="7DV-1f-mDK" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="BzU-JT-HB5"/>
+                            <constraint firstItem="7DV-1f-mDK" firstAttribute="top" secondItem="uKy-3p-jwj" secondAttribute="bottom" constant="38" id="VeT-Ma-Siw"/>
+                            <constraint firstItem="uKy-3p-jwj" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="e7o-es-cfG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customLabel" destination="uKy-3p-jwj" id="TR3-DK-6P7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

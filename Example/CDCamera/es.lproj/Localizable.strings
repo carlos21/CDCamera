@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  CDCamera
+
+  Created by Carlos Duclos on 5/29/17.
+  Copyright © 2017 carlos21. All rights reserved.
+*/
+
+"test_key" = "Este es mi texto de prueba";

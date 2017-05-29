@@ -18,13 +18,6 @@
 
 #pragma mark - Lifecycle
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:aDecoder]) {
-        
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupView];
@@ -32,7 +25,6 @@
 }
 
 - (void)dealloc {
-    NSLog(@"CDVideoViewController - dealloc");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -60,7 +52,7 @@
         self.player.muted = YES;
         
         self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
-        self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+        self.playerLayer.videoGravity = AVLayerVideoGravityResize;
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             self.playerLayer.frame = self.view.bounds;

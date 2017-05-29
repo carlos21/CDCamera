@@ -16,31 +16,9 @@
 
 #pragma mark - Lifecycle
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:aDecoder]) {
-        
-    }
-    return self;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    NSLog(@"CDPhotoViewController - viewWillAppear");
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    NSLog(@"CDPhotoViewController - viewWillDisappear");
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setupView];
-}
-
-- (void)dealloc {
-    NSLog(@"CDPhotoViewController - dealloc");
 }
 
 #pragma mark - Actions

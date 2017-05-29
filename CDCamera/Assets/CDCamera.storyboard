@@ -138,10 +138,10 @@
                     <connections>
                         <outlet property="cameraButton" destination="BfT-xI-8X9" id="w11-cV-fFF"/>
                         <outlet property="closeButton" destination="7WL-Hq-iFe" id="mPo-ZX-3lK"/>
-                        <outlet property="flashButton" destination="vhi-HY-CaG" id="MBS-di-wNf"/>
                         <outlet property="instructionsLabel" destination="NKw-sX-Tn3" id="htW-5Q-YuC"/>
                         <outlet property="previewView" destination="uG3-Tl-VJq" id="qdi-yM-bD8"/>
-                        <outlet property="toggleButton" destination="HXr-vE-iXf" id="gzo-JR-eTD"/>
+                        <outlet property="toggleCameraButton" destination="vhi-HY-CaG" id="zNg-xs-OhY"/>
+                        <outlet property="toggleFlashButton" destination="HXr-vE-iXf" id="zcc-KP-UjB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
