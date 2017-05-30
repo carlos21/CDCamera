@@ -11,6 +11,8 @@
 #import "CDPhotoViewController.h"
 #import "CDCameraButton.h"
 #import "CDCameraPreviewView.h"
+#import "UIImage+Crop.h"
+#import "AVAssetExportSession+Crop.h"
 #import <AVFoundation/AVFoundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
@@ -55,7 +57,7 @@ static NSString *kStoryboardName = @"CDCamera";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDidRotate:) name:UIDeviceOrientationDidChangeNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDidRotate:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -72,10 +74,12 @@ static NSString *kStoryboardName = @"CDCamera";
     if (UIDeviceOrientationIsPortrait(deviceOrientation) || UIDeviceOrientationIsLandscape(deviceOrientation)) {
         self.previewView.videoPreviewLayer.connection.videoOrientation = (AVCaptureVideoOrientation)deviceOrientation;
     }
+    
+    [self stopRecording];
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Custom Accesors
@@ -83,7 +87,7 @@ static NSString *kStoryboardName = @"CDCamera";
 - (AVCaptureSession *)session {
     if (!_session) {
         _session = [AVCaptureSession new];
-        _session.sessionPreset = AVCaptureSessionPresetHigh;
+        _session.sessionPreset = AVCaptureSessionPresetPhoto;
     }
     return _session;
 }
@@ -99,7 +103,8 @@ static NSString *kStoryboardName = @"CDCamera";
 #pragma mark - Override
 
 - (BOOL)shouldAutorotate {
-    return !self.movieFileOutput.isRecording;
+    BOOL should = !self.movieFileOutput.isRecording;
+    return should;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
@@ -116,7 +121,8 @@ static NSString *kStoryboardName = @"CDCamera";
 
 - (IBAction)toggleCameraTapped:(id)sender {
     self.useFrontCamera = !self.useFrontCamera;
-    self.toggleFlashButton.enabled = !self.useFrontCamera;
+    self.toggleFlashButton.enabled = !(self.type == kCDCameraTypeVideo && self.useFrontCamera);
+    
     [self.session stopRunning];
     
     dispatch_async(self.sessionQueue, ^{
@@ -160,9 +166,23 @@ static NSString *kStoryboardName = @"CDCamera";
 
 #pragma mark - Private
 
+- (UIDeviceOrientation)deviceOrientation {
+    UIInterfaceOrientation statusBarOrientation = [UIApplication sharedApplication].statusBarOrientation;
+    if (statusBarOrientation == UIInterfaceOrientationLandscapeRight) {
+        return UIDeviceOrientationLandscapeLeft;
+    } else if (statusBarOrientation == UIInterfaceOrientationLandscapeLeft) {
+        return UIDeviceOrientationLandscapeRight;
+    } else if (statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        return UIDeviceOrientationPortraitUpsideDown;
+    } else {
+        return UIDeviceOrientationPortrait;
+    }
+    
+}
+
 - (void)setupView {
     NSBundle *bundle = [NSBundle bundleForClass:[CDCameraViewController class]];
-    UIImage *imageDisabled = [UIImage imageNamed:@"" inBundle:bundle compatibleWithTraitCollection:nil];
+    UIImage *imageDisabled = [UIImage imageNamed:@"flashOutlineDisabled" inBundle:bundle compatibleWithTraitCollection:nil];
     [self.toggleFlashButton setImage:imageDisabled forState:UIControlStateDisabled];
     self.view.backgroundColor = [UIColor redColor];
     
@@ -170,6 +190,10 @@ static NSString *kStoryboardName = @"CDCamera";
     self.previewView.videoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     
     self.zoomScale = 1.0;
+    
+    if ([UIDevice currentDevice].orientation != UIDeviceOrientationFaceUp && [UIDevice currentDevice].orientation != UIDeviceOrientationFaceDown) {
+        self.deviceOrientation = [UIDevice currentDevice].orientation;
+    }
     
     switch (self.type) {
         case kCDCameraTypePhoto:
@@ -215,11 +239,11 @@ static NSString *kStoryboardName = @"CDCamera";
 //    self.previewView.videoPreviewLayer.frame = self.view.bounds;
 //}
 
-- (void)deviceDidRotate:(NSNotification *)notification {
-    if ([UIDevice currentDevice].orientation != UIDeviceOrientationFaceUp && [UIDevice currentDevice].orientation != UIDeviceOrientationFaceDown) {
-        self.deviceOrientation = [UIDevice currentDevice].orientation;
-    }
-}
+//- (void)deviceDidRotate:(NSNotification *)notification {
+//    if ([UIDevice currentDevice].orientation != UIDeviceOrientationFaceUp && [UIDevice currentDevice].orientation != UIDeviceOrientationFaceDown) {
+//        self.deviceOrientation = [UIDevice currentDevice].orientation;
+//    }
+//}
 
 - (AVCaptureDevice *)deviceWithMediaType:(NSString *)mediaType withPosition:(AVCaptureDevicePosition)position {
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:mediaType];
@@ -434,6 +458,8 @@ static NSString *kStoryboardName = @"CDCamera";
         
         NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
         UIImage *image = [self processPhotoWithData:imageData];
+        image = [image applyAspectFillInRect:self.previewView.frame];
+        
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self showPhotoController:image];
         }];
@@ -555,7 +581,6 @@ static NSString *kStoryboardName = @"CDCamera";
 
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error {
     [self enableFlash:NO];
-    
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self showVideoController:outputFileURL];
     }];

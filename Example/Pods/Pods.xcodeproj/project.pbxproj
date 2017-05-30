@@ -13,6 +13,10 @@
 		340413B2F28F33BA3EA5B6CF52EC5B3B /* CDPhotoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D433ADED27C7D7C3BDACF2FAB465BA /* CDPhotoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359628171EDD24DE0007AC06 /* CDCameraPreviewView.h in Headers */ = {isa = PBXBuildFile; fileRef = 359628151EDD24DE0007AC06 /* CDCameraPreviewView.h */; };
 		359628181EDD24DE0007AC06 /* CDCameraPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 359628161EDD24DE0007AC06 /* CDCameraPreviewView.m */; };
+		35D3F7141EDDC9840009A726 /* UIImage+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = 35D3F7121EDDC9840009A726 /* UIImage+Crop.h */; };
+		35D3F7151EDDC9840009A726 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D3F7131EDDC9840009A726 /* UIImage+Crop.m */; };
+		35D3F7181EDDDCA70009A726 /* AVAssetExportSession+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = 35D3F7161EDDDCA70009A726 /* AVAssetExportSession+Crop.h */; };
+		35D3F7191EDDDCA70009A726 /* AVAssetExportSession+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D3F7171EDDDCA70009A726 /* AVAssetExportSession+Crop.m */; };
 		3D385E13F993B25983469F9DD341B221 /* CALayer+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 03558D5C1F979CF80B83134516C9BCF1 /* CALayer+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DEE2FE68F70A9A6C84B78E75382833E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		580578FB60514D86A417139A15C0B9A0 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E006E5582117045D54A50DCAD3487600 /* en.lproj */; };
@@ -62,6 +66,10 @@
 		359628151EDD24DE0007AC06 /* CDCameraPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCameraPreviewView.h; sourceTree = "<group>"; };
 		359628161EDD24DE0007AC06 /* CDCameraPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCameraPreviewView.m; sourceTree = "<group>"; };
 		359741A9062ADE03EE6E36DD6AFBA277 /* CDCamera-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDCamera-prefix.pch"; sourceTree = "<group>"; };
+		35D3F7121EDDC9840009A726 /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
+		35D3F7131EDDC9840009A726 /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
+		35D3F7161EDDDCA70009A726 /* AVAssetExportSession+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAssetExportSession+Crop.h"; sourceTree = "<group>"; };
+		35D3F7171EDDDCA70009A726 /* AVAssetExportSession+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAssetExportSession+Crop.m"; sourceTree = "<group>"; };
 		36839FDDFEDD939D5EA9E946D2CE5A8D /* Pods-CDCamera_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDCamera_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3FC095E82B71D7461A96B2485AF438B2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46137E500009933C32E2D614A2AE9788 /* CDCamera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDCamera-umbrella.h"; sourceTree = "<group>"; };
@@ -142,6 +150,10 @@
 				18199E5F1FF3891169CB33DF90BEA1EC /* CDVideoViewController.m */,
 				359628151EDD24DE0007AC06 /* CDCameraPreviewView.h */,
 				359628161EDD24DE0007AC06 /* CDCameraPreviewView.m */,
+				35D3F7121EDDC9840009A726 /* UIImage+Crop.h */,
+				35D3F7131EDDC9840009A726 /* UIImage+Crop.m */,
+				35D3F7161EDDDCA70009A726 /* AVAssetExportSession+Crop.h */,
+				35D3F7171EDDDCA70009A726 /* AVAssetExportSession+Crop.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -314,12 +326,14 @@
 			files = (
 				359628171EDD24DE0007AC06 /* CDCameraPreviewView.h in Headers */,
 				3D385E13F993B25983469F9DD341B221 /* CALayer+Utils.h in Headers */,
+				35D3F7141EDDC9840009A726 /* UIImage+Crop.h in Headers */,
 				6C8DBD3813B2647DF0AFEE9CD800F0AF /* CDCamera-umbrella.h in Headers */,
 				6A1E54B4D0AD12BE776E83A7DAAD07F0 /* CDCameraButton.h in Headers */,
 				8E561F80E41DE0274C7D977EED36A84B /* CDCameraType.h in Headers */,
 				B27A7740B6D06BF30BB917E86ADBFB86 /* CDCameraViewController.h in Headers */,
 				340413B2F28F33BA3EA5B6CF52EC5B3B /* CDPhotoViewController.h in Headers */,
 				BEFE75B93ED1E5DE4EC664A5E4FD4F64 /* CDVideoViewController.h in Headers */,
+				35D3F7181EDDDCA70009A726 /* AVAssetExportSession+Crop.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,9 +466,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1F4FF905DEE3ECD0937043EF331A9F7 /* CALayer+Utils.m in Sources */,
+				35D3F7151EDDC9840009A726 /* UIImage+Crop.m in Sources */,
 				359628181EDD24DE0007AC06 /* CDCameraPreviewView.m in Sources */,
 				84A4C95416AED8E357725338A744E0BB /* CDCamera-dummy.m in Sources */,
 				D445EF9DCCB7AD24FA0EC61447DD2AEE /* CDCameraButton.m in Sources */,
+				35D3F7191EDDDCA70009A726 /* AVAssetExportSession+Crop.m in Sources */,
 				BA835563B158306C5C721CDCAA391411 /* CDCameraViewController.m in Sources */,
 				2ADFDB69F575F1CB4685C6E528CEE90E /* CDPhotoViewController.m in Sources */,
 				2DAA76611CEA66334E9025DBECBC2A3D /* CDVideoViewController.m in Sources */,
