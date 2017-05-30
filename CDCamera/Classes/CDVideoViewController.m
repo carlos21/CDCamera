@@ -24,6 +24,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:[self.player currentItem]];
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.playerLayer.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -52,7 +57,7 @@
         self.player.muted = YES;
         
         self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
-        self.playerLayer.videoGravity = AVLayerVideoGravityResize;
+        self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             self.playerLayer.frame = self.view.bounds;

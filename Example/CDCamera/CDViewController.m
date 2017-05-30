@@ -24,17 +24,13 @@
 - (IBAction)showTapped:(id)sender {
     CDCameraViewController *cameraController = [CDCameraViewController instanceWithType:kCDCameraTypePhoto maxDuration:15.0];
     cameraController.delegate = self;
-    [cameraController willMoveToParentViewController:self];
-    [self addChildViewController:cameraController];
-    [self.view addSubview:cameraController.view];
-    [cameraController didMoveToParentViewController:self];
+    [self presentViewController:cameraController animated:YES completion:nil];
 }
 
 #pragma mark - CDCameraViewControllerDelegate
 
 - (void)cameraControllerDidClose:(CDCameraViewController *)controller {
-    [controller removeFromParentViewController];
-    [controller.view removeFromSuperview];
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)cameraController:(CDCameraViewController *)controller didSelectVideo:(NSURL *)videoUrl {

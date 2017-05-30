@@ -38,7 +38,7 @@
 #pragma mark - Private
 
 - (void)setupView {
-    self.photoView.contentMode = UIViewContentModeScaleAspectFill;
+    self.photoView.contentMode = UIViewContentModeScaleAspectFit;
     self.photoView.image = self.image;
 }
 

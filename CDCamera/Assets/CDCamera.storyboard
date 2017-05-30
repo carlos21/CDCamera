@@ -59,7 +59,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uG3-Tl-VJq">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uG3-Tl-VJq" customClass="CDCameraPreviewView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKw-sX-Tn3">
@@ -139,7 +139,7 @@
                         <outlet property="cameraButton" destination="BfT-xI-8X9" id="w11-cV-fFF"/>
                         <outlet property="closeButton" destination="7WL-Hq-iFe" id="mPo-ZX-3lK"/>
                         <outlet property="instructionsLabel" destination="NKw-sX-Tn3" id="htW-5Q-YuC"/>
-                        <outlet property="previewView" destination="uG3-Tl-VJq" id="qdi-yM-bD8"/>
+                        <outlet property="previewView" destination="uG3-Tl-VJq" id="yEf-Hm-Beb"/>
                         <outlet property="toggleCameraButton" destination="vhi-HY-CaG" id="zNg-xs-OhY"/>
                         <outlet property="toggleFlashButton" destination="HXr-vE-iXf" id="zcc-KP-UjB"/>
                     </connections>
@@ -247,7 +247,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JOw-a9-WD1" firstAttribute="centerX" secondItem="D7Z-yK-VfC" secondAttribute="centerX" constant="-60" id="XyR-wf-l6o"/>
                             <constraint firstItem="FxI-bb-zTA" firstAttribute="top" secondItem="zV7-3s-diq" secondAttribute="bottom" constant="40" id="hSf-24-YUC"/>
