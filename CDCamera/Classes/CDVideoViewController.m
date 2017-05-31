@@ -7,7 +7,6 @@
 //
 
 #import "CDVideoViewController.h"
-#import "AVAssetExportSession+Crop.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface CDVideoViewController ()
@@ -58,7 +57,9 @@
         self.player.muted = YES;
         
         self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
-        self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+        
+        BOOL isIpad = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
+        self.playerLayer.videoGravity = isIpad ? AVLayerVideoGravityResizeAspectFill : AVLayerVideoGravityResizeAspect;
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             self.playerLayer.frame = self.view.bounds;

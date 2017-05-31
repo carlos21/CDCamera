@@ -12,7 +12,6 @@
 #import "CDCameraButton.h"
 #import "CDCameraPreviewView.h"
 #import "UIImage+Crop.h"
-#import "AVAssetExportSession+Crop.h"
 #import <AVFoundation/AVFoundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
@@ -27,11 +26,9 @@ static NSString *kStoryboardName = @"CDCamera";
 @property (weak, nonatomic) IBOutlet UILabel *instructionsLabel;
 @property (weak, nonatomic) IBOutlet CDCameraPreviewView *previewView;
 
-//@property (assign, nonatomic, readonly) AVCaptureVideoOrientation previewLayerOrientation;
 @property (assign, nonatomic, readonly) AVCaptureVideoOrientation videoOrientation;
 @property (assign, nonatomic, readonly) UIImageOrientation imageOrientation;
 @property (assign, nonatomic) UIDeviceOrientation deviceOrientation;
-
 
 @property (strong, nonatomic) AVCaptureSession *session;
 @property (strong, nonatomic) AVCaptureDevice *videoDevice;
@@ -57,7 +54,6 @@ static NSString *kStoryboardName = @"CDCamera";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDidRotate:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -76,10 +72,6 @@ static NSString *kStoryboardName = @"CDCamera";
     }
     
     [self stopRecording];
-}
-
-- (void)dealloc {
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Custom Accesors
@@ -101,11 +93,6 @@ static NSString *kStoryboardName = @"CDCamera";
 }
 
 #pragma mark - Override
-
-- (BOOL)shouldAutorotate {
-    BOOL should = !self.movieFileOutput.isRecording;
-    return should;
-}
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskAll;
@@ -234,17 +221,6 @@ static NSString *kStoryboardName = @"CDCamera";
     self.cameraButton.type = self.type;
 }
 
-//- (void)updatePreviewLayer:(AVCaptureVideoOrientation)videoOrientation {
-//    self.previewView.videoPreviewLayer.connection.videoOrientation = videoOrientation;
-//    self.previewView.videoPreviewLayer.frame = self.view.bounds;
-//}
-
-//- (void)deviceDidRotate:(NSNotification *)notification {
-//    if ([UIDevice currentDevice].orientation != UIDeviceOrientationFaceUp && [UIDevice currentDevice].orientation != UIDeviceOrientationFaceDown) {
-//        self.deviceOrientation = [UIDevice currentDevice].orientation;
-//    }
-//}
-
 - (AVCaptureDevice *)deviceWithMediaType:(NSString *)mediaType withPosition:(AVCaptureDevicePosition)position {
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:mediaType];
     for (AVCaptureDevice *device in devices) {
@@ -254,19 +230,6 @@ static NSString *kStoryboardName = @"CDCamera";
     }
     return nil;
 }
-
-//- (AVCaptureVideoOrientation)previewLayerOrientation {
-//    switch ([[UIApplication sharedApplication] statusBarOrientation]) {
-//        case UIInterfaceOrientationLandscapeLeft:
-//            return AVCaptureVideoOrientationLandscapeLeft;
-//        case UIInterfaceOrientationLandscapeRight:
-//            return AVCaptureVideoOrientationLandscapeRight;
-//        case UIInterfaceOrientationPortraitUpsideDown:
-//            return AVCaptureVideoOrientationPortraitUpsideDown;
-//        default:
-//            return AVCaptureVideoOrientationPortrait;
-//    }
-//}
 
 - (AVCaptureVideoOrientation)videoOrientation {
     if (!self.deviceOrientation) {
@@ -513,11 +476,12 @@ static NSString *kStoryboardName = @"CDCamera";
 }
 
 - (void)stopRecording {
-    if (!self.movieFileOutput.isRecording) {
-        return;
-    }
-    
-    [self.movieFileOutput stopRecording];
+    dispatch_async(self.sessionQueue, ^{
+        if (!self.movieFileOutput.isRecording) {
+            return;
+        }
+        [self.movieFileOutput stopRecording];
+    });
 }
 
 - (void)takePhoto {

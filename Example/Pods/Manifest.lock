@@ -1,5 +1,5 @@
 PODS:
-  - CDCamera (0.1.0)
+  - CDCamera (0.3.0)
 
 DEPENDENCIES:
   - CDCamera (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CDCamera: f5e925b0815413d4c564226d4dd52e2d0ff48f70
+  CDCamera: 4554e12ce93dd4b4ca92b3b1e528b360e6fb8c95
 
 PODFILE CHECKSUM: 3c76d6fb801738e8bb087a8ad4728965488a4746
 
