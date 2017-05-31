@@ -182,12 +182,19 @@ static NSString *kStoryboardName = @"CDCamera";
         self.deviceOrientation = [UIDevice currentDevice].orientation;
     }
     
+    NSArray *languages = @[@"en", @"es"];
+    NSString *lang = [[NSLocale currentLocale] languageCode];
+    if (![languages containsObject:lang]) {
+        lang = @"en";
+    }
+    
+    NSString *table = [NSString stringWithFormat:@"CDCamera_%@", lang];
     switch (self.type) {
         case kCDCameraTypePhoto:
-            self.instructionsLabel.text = NSLocalizedStringFromTableInBundle(@"camera_instructions_tap", @"CDCamera", bundle, @"");
+            self.instructionsLabel.text = NSLocalizedStringFromTableInBundle(@"camera_instructions_tap", table, bundle, @"");
             break;
         case kCDCameraTypeVideo:
-            self.instructionsLabel.text = NSLocalizedStringFromTableInBundle(@"camera_instructions_press_and_hold", @"CDCamera", bundle, @"");
+            self.instructionsLabel.text = NSLocalizedStringFromTableInBundle(@"camera_instructions_press_and_hold", table, bundle, @"");
             break;
     }
     
