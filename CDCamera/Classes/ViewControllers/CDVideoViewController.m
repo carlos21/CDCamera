@@ -54,7 +54,6 @@
     [queue addOperationWithBlock:^{
         self.player = [[AVPlayer alloc] initWithURL:self.videoURL];
         self.player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
-        self.player.muted = YES;
         
         self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
         
