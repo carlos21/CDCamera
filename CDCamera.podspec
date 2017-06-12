@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CDCamera'
-  s.version          = '0.3.4'
+  s.version          = '0.3.5'
   s.summary          = 'A customized camera controller using AVFoundation'
   s.resources        = 'CDCamera/Assets/*'
 
