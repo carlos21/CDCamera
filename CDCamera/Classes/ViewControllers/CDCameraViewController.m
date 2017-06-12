@@ -183,7 +183,7 @@ static NSString *kStoryboardName = @"CDCamera";
     }
     
     NSArray *languages = @[@"en", @"es"];
-    NSString *lang = [[NSLocale currentLocale] languageCode];
+    NSString *lang = [[NSLocale currentLocale] objectForKey: NSLocaleLanguageCode];
     if (![languages containsObject:lang]) {
         lang = @"en";
     }

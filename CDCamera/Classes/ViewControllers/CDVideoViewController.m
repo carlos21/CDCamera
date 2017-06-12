@@ -57,8 +57,8 @@
         
         self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
         
-        BOOL isIpad = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
-        self.playerLayer.videoGravity = isIpad ? AVLayerVideoGravityResizeAspectFill : AVLayerVideoGravityResizeAspect;
+//        BOOL isIpad = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
+        self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             self.playerLayer.frame = self.view.bounds;
