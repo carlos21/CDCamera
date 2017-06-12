@@ -14,6 +14,7 @@
 #import "UIImage+Crop.h"
 #import <AVFoundation/AVFoundation.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import "CDCameraCounterView.h"
 
 static NSString *kStoryboardName = @"CDCamera";
 
@@ -25,6 +26,7 @@ static NSString *kStoryboardName = @"CDCamera";
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (weak, nonatomic) IBOutlet UILabel *instructionsLabel;
 @property (weak, nonatomic) IBOutlet CDCameraPreviewView *previewView;
+@property (weak, nonatomic) IBOutlet CDCameraCounterView *counterView;
 
 @property (assign, nonatomic, readonly) AVCaptureVideoOrientation videoOrientation;
 @property (assign, nonatomic, readonly) UIImageOrientation imageOrientation;
@@ -40,6 +42,7 @@ static NSString *kStoryboardName = @"CDCamera";
 
 @property (assign, nonatomic) BOOL useFrontCamera;
 @property (assign, nonatomic) BOOL useFlash;
+@property (assign, nonatomic) BOOL statusBarWasHidden;
 
 @property (nonatomic, assign) NSUInteger maxDuration;
 @property (nonatomic, assign) kCDCameraType type;
@@ -54,6 +57,8 @@ static NSString *kStoryboardName = @"CDCamera";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.statusBarWasHidden = [UIApplication sharedApplication].isStatusBarHidden;
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -72,6 +77,10 @@ static NSString *kStoryboardName = @"CDCamera";
     }
     
     [self stopRecording];
+}
+
+- (void)dealloc {
+    [[UIApplication sharedApplication] setStatusBarHidden:self.statusBarWasHidden];
 }
 
 #pragma mark - Custom Accesors
@@ -96,6 +105,10 @@ static NSString *kStoryboardName = @"CDCamera";
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskAll;
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 #pragma mark - Actions
@@ -176,6 +189,7 @@ static NSString *kStoryboardName = @"CDCamera";
     self.previewView.session = self.session;
     self.previewView.videoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     
+    self.counterView.alpha = 0.0;
     self.zoomScale = 1.0;
     
     if ([UIDevice currentDevice].orientation != UIDeviceOrientationFaceUp && [UIDevice currentDevice].orientation != UIDeviceOrientationFaceDown) {
@@ -413,6 +427,10 @@ static NSString *kStoryboardName = @"CDCamera";
         self.instructionsLabel.alpha = newAlpha;
         self.toggleCameraButton.alpha = newAlpha;
         self.toggleFlashButton.alpha = newAlpha;
+        
+        if (!flag && self.type == kCDCameraTypeVideo) {
+            self.counterView.alpha = 0.65;
+        }
     }];
 }
 
@@ -489,6 +507,8 @@ static NSString *kStoryboardName = @"CDCamera";
         }
         [self.movieFileOutput stopRecording];
     });
+    
+    self.counterView.alpha = 0.0;
 }
 
 - (void)takePhoto {
@@ -566,6 +586,7 @@ static NSString *kStoryboardName = @"CDCamera";
 - (void)cameraButtonDidBeginLongPress {
     [self startRecording];
     [self showUIElements:NO];
+    [self.counterView startCounterWithSeconds:self.maxDuration];
 }
 
 - (void)cameraButtonDidEndLongPress {
