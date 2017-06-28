@@ -21,7 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupView];
+    
+    // With this line, we avoid that the player gets stopped during a facetime session of incoming call
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:[self.player currentItem]];
+    
 }
 
 - (void)viewDidLayoutSubviews {
@@ -30,6 +35,7 @@
 }
 
 - (void)dealloc {
+    [self.player pause];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

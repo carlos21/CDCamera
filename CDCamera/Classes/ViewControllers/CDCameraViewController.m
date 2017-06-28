@@ -35,6 +35,7 @@ static NSString *kStoryboardName = @"CDCamera";
 @property (strong, nonatomic) AVCaptureSession *session;
 @property (strong, nonatomic) AVCaptureDevice *videoDevice;
 @property (strong, nonatomic) AVCaptureDeviceInput *videoInputDevice;
+@property (strong, nonatomic) AVCaptureDeviceInput *audioInputDevice;
 @property (strong, nonatomic) AVCaptureMovieFileOutput *movieFileOutput;
 @property (strong, nonatomic) AVCaptureStillImageOutput *photoFileOutput;
 
@@ -57,8 +58,8 @@ static NSString *kStoryboardName = @"CDCamera";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.statusBarWasHidden = [UIApplication sharedApplication].isStatusBarHidden;
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionWasInterrupted:) name:AVCaptureSessionWasInterruptedNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionInterruptionEnded:) name:AVCaptureSessionInterruptionEndedNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -80,7 +81,7 @@ static NSString *kStoryboardName = @"CDCamera";
 }
 
 - (void)dealloc {
-    [[UIApplication sharedApplication] setStatusBarHidden:self.statusBarWasHidden];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Custom Accesors
@@ -162,6 +163,33 @@ static NSString *kStoryboardName = @"CDCamera";
     }
     
     [self.videoDevice unlockForConfiguration];
+}
+
+- (void)sessionWasInterrupted:(NSNotification *)notification {
+    NSLog(@"sessionWasInterrupted");
+    NSDictionary *userInfo = notification.userInfo;
+    if (!userInfo) {
+        return;
+    }
+    
+    id interruptionReason = userInfo[AVCaptureSessionInterruptionReasonKey];
+    if (interruptionReason) {
+        [self removeAudioInput];
+        
+        if ([self.delegate respondsToSelector:@selector(cameraControllerWasInterrupted:)]) {
+            [self.delegate cameraControllerWasInterrupted:self];
+        }
+    }
+}
+
+- (void)sessionInterruptionEnded:(NSNotification *)notification {
+    NSLog(@"sessionInterruptionEnded");
+    NSDictionary *userInfo = notification.userInfo;
+    NSLog(@"userInfo: %@", userInfo);
+    [self.session beginConfiguration];
+    [self.session setSessionPreset:AVCaptureSessionPresetHigh];
+    [self addAudioInput];
+    [self.session commitConfiguration];
 }
 
 #pragma mark - Private
@@ -309,12 +337,23 @@ static NSString *kStoryboardName = @"CDCamera";
 }
 
 - (void)addAudioInput {
+    if (self.audioInputDevice) {
+        return;
+    }
+    
     NSError *error = nil;
     AVCaptureDevice *audioDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeAudio];
-    AVCaptureDeviceInput *audioDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:audioDevice error:&error];
+    self.audioInputDevice = [AVCaptureDeviceInput deviceInputWithDevice:audioDevice error:&error];
     
-    if ([self.session canAddInput:audioDeviceInput]) {
-        [self.session addInput:audioDeviceInput];
+    if ([self.session canAddInput:self.audioInputDevice]) {
+        [self.session addInput:self.audioInputDevice];
+    }
+}
+
+- (void)removeAudioInput {
+    if (self.audioInputDevice) {
+        [self.session removeInput:self.audioInputDevice];
+        self.audioInputDevice = nil;
     }
 }
 

@@ -15,6 +15,7 @@
 - (void)cameraControllerDidClose:(CDCameraViewController *)controller;
 - (void)cameraController:(CDCameraViewController *)controller didSelectPhoto:(UIImage *)image;
 - (void)cameraController:(CDCameraViewController *)controller didSelectVideo:(NSURL *)videoUrl;
+- (void)cameraControllerWasInterrupted:(CDCameraViewController *)controller;
 
 @end
 

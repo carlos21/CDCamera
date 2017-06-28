@@ -22,7 +22,7 @@
 }
 
 - (IBAction)showTapped:(id)sender {
-    CDCameraViewController *cameraController = [CDCameraViewController instanceWithType:kCDCameraTypePhoto maxDuration:60.0];
+    CDCameraViewController *cameraController = [CDCameraViewController instanceWithType:kCDCameraTypeVideo maxDuration:60.0];
     cameraController.delegate = self;
     [self presentViewController:cameraController animated:YES completion:nil];
 }
@@ -39,6 +39,10 @@
 
 - (void)cameraController:(CDCameraViewController *)controller didSelectPhoto:(UIImage *)image {
     
+}
+
+- (void)cameraControllerWasInterrupted:(CDCameraViewController *)controller {
+    NSLog(@"cameraControllerWasInterrupted");
 }
 
 @end
