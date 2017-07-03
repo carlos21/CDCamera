@@ -24,7 +24,6 @@
     
     // With this line, we avoid that the player gets stopped during a facetime session of incoming call
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:[self.player currentItem]];
     
 }
@@ -35,19 +34,20 @@
 }
 
 - (void)dealloc {
-    [self.player pause];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Actions
 
 - (IBAction)cancelTapped:(id)sender {
+    [self.player pause];
     if ([self.delegate respondsToSelector:@selector(videoController:didSelectVideo:)]) {
         [self.delegate videoController:self didSelectVideo:nil];
     }
 }
 
 - (IBAction)selectTapped:(id)sender {
+    [self.player pause];
     if ([self.delegate respondsToSelector:@selector(videoController:didSelectVideo:)]) {
         [self.delegate videoController:self didSelectVideo:self.videoURL];
     }
@@ -61,9 +61,8 @@
         self.player = [[AVPlayer alloc] initWithURL:self.videoURL];
         self.player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
         
+//      BOOL isIpad = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
         self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
-        
-//        BOOL isIpad = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
         self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{

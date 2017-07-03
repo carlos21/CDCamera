@@ -184,8 +184,6 @@ static NSString *kStoryboardName = @"CDCamera";
 
 - (void)sessionInterruptionEnded:(NSNotification *)notification {
     NSLog(@"sessionInterruptionEnded");
-    NSDictionary *userInfo = notification.userInfo;
-    NSLog(@"userInfo: %@", userInfo);
     [self.session beginConfiguration];
     [self.session setSessionPreset:AVCaptureSessionPresetHigh];
     [self addAudioInput];
