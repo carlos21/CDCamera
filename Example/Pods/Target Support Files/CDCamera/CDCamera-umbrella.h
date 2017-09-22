@@ -17,6 +17,7 @@
 #import "CDPhotoViewController.h"
 #import "CDVideoViewController.h"
 #import "CDCameraButton.h"
+#import "CDCameraCounterView.h"
 #import "CDCameraPreviewView.h"
 
 FOUNDATION_EXPORT double CDCameraVersionNumber;

@@ -67,6 +67,7 @@ static NSString *kStoryboardName = @"CDCamera";
     [self setupView];
     [self setupSession];
     [self setupCameraButton];
+    [self setupGestures];
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -237,10 +238,16 @@ static NSString *kStoryboardName = @"CDCamera";
             self.instructionsLabel.text = NSLocalizedStringFromTableInBundle(@"camera_instructions_press_and_hold", table, bundle, @"");
             break;
     }
-    
+}
+
+- (void)setupGestures {
     UIPinchGestureRecognizer *zoomGesture = [UIPinchGestureRecognizer new];
     [zoomGesture addTarget:self action:@selector(zoomGestureEvent:)];
     [self.view addGestureRecognizer:zoomGesture];
+    
+    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleCameraTapped:)];
+    doubleTapGesture.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:doubleTapGesture];
 }
 
 - (void)setupSession {

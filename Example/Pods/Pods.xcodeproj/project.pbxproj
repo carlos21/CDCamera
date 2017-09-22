@@ -7,37 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A21B9BC63E0B22FF455A71B19FF0EB /* CDCameraCounterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FF051CCDC49AFB19BE6A8AE8860C407 /* CDCameraCounterView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0312D503612204CD2FA877059C9E887C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		0609F293C08040434FC00CCDA0F75AF2 /* CDCameraButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B8C055B004A2CE722073EEF8F9582397 /* CDCameraButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D4A75E1875FDBB4D354D9E9A3811F0A /* CDCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A785ADED7DA021A0F3217B9DB1FF3766 /* CDCamera-dummy.m */; };
-		130136FF31842BE6B289F16887330730 /* CDCameraType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C083B4F4FA44C5170A9D0B303961EF6 /* CDCameraType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14F63F8DC42ACA292C47568D44552797 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		1EACCE472B9F86015C090A4C3EA0A249 /* CDCamera_es.strings in Resources */ = {isa = PBXBuildFile; fileRef = 615D712E5570209D810628DA0B2817D7 /* CDCamera_es.strings */; };
-		3531016E1EE1CAEB00191D36 /* CDCameraCounterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3531016C1EE1CAEB00191D36 /* CDCameraCounterView.h */; };
-		3531016F1EE1CAEB00191D36 /* CDCameraCounterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3531016D1EE1CAEB00191D36 /* CDCameraCounterView.m */; };
-		353101711EE1CB2E00191D36 /* CDCameraCounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 353101701EE1CB2E00191D36 /* CDCameraCounterView.xib */; };
-		3709B9B932B90CD245B6FA399A04C55F /* CALayer+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D3FB7008A5959A2D53C840C50A3859 /* CALayer+Utils.m */; };
+		0AB8DECC65C43C5686C53EE2D3053D13 /* CDCameraButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E72630BA9D506870CCCE7C3CFED4F6A9 /* CDCameraButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A072A9E8817CFBB0DAB137361090412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44866CB1D459F47645132CD0699C8CCA /* Assets.xcassets */; };
+		28627F61F36FBFDD4513A8312731DEB2 /* CDCameraType.h in Headers */ = {isa = PBXBuildFile; fileRef = 45406BD97F94E3C31927E8EB367A1057 /* CDCameraType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29C62552008DAE01A97FF4C330843354 /* CDCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF144EB2475BBA56B3E57AF975B72F /* CDCameraButton.m */; };
 		3DEE2FE68F70A9A6C84B78E75382833E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4180FD4529D35AE6715203E4E23A1C2F /* CDCamera_en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24D81B8EEAA8657AE368A1F923256F57 /* CDCamera_en.strings */; };
-		6688DEEFF17BB55AC4D21643A6B72F33 /* CDVideoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 35269CF9DC4CE83F090D7AB7CE212AEB /* CDVideoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BC61AADB1CBF954645C9E11AE70DF56 /* CDCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23114B7271FF7DDF2971F655AC8C5BE8 /* CDCameraViewController.m */; };
-		6BD6130A271A27CE01DC7897CC0AC6A5 /* CALayer+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F4AC46A897588B42702887306DBB5C3A /* CALayer+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74921A59BCC564BCDCF6AFA79C56F781 /* CDCamera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46137E500009933C32E2D614A2AE9788 /* CDCamera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		89D8AAAF078AA89B1B792DD1D483E0C9 /* CDCameraPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFE5FE3084616CFE8F41C1FD71F81FE /* CDCameraPreviewView.m */; };
-		99F1E661E19CD51E0293884F1D37A4DB /* CDVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CDB86EB85FA2656DF5039311FAB21 /* CDVideoViewController.m */; };
-		A5AE74102D8BB1268F22E63C040C3A5E /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE7AFD81E405F8A1C514D1FCC4ABAF4 /* UIImage+Crop.m */; };
-		A62EA2D13AB21F29CE76AEE877BA1040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 647513F30DBE91492B8211D55B5B7560 /* Assets.xcassets */; };
+		5F3FB43CBF48F972BEEC95985B81A844 /* CDCameraCounterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38086C4C24C6AA8DA61D5A3208201C44 /* CDCameraCounterView.m */; };
+		67B589F318F1AFCE275B2668985D9CB8 /* CDVideoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CC907DF80DB1D11F3614E52F9B26225 /* CDVideoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68605144C7E89ADC6243B666C4C3FDB2 /* CDCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A785ADED7DA021A0F3217B9DB1FF3766 /* CDCamera-dummy.m */; };
+		6DB540F901AADFD30A0F9028613A7179 /* CDCamera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46137E500009933C32E2D614A2AE9788 /* CDCamera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A3AE47D4E6CE03E5F813777970D725D /* CDVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93157D789521013B26E7C61219AE78B /* CDVideoViewController.m */; };
+		86F8D2ADA258C106C0A9ADFE01D9CD6F /* CDPhotoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AF9AAE84D08608C501C1E722398D7C3A /* CDPhotoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D780E6F4617AA000EA75A64CFD60F62 /* CDCameraPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268D525F2FFF12700A474422AA5F201E /* CDCameraPreviewView.m */; };
+		9890DF1A1568235A9A90D1D19A3FC076 /* CALayer+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F800AECE1D7EBBD8617C530F7175E3 /* CALayer+Utils.m */; };
+		A524072C49BBAC3C4CF848D43ACFA2C8 /* CDCamera_es.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78560D486B5D587FC650B0E35385C9AB /* CDCamera_es.strings */; };
+		A9DB061F200E3B2A53C8C90E229695DC /* CDCameraPreviewView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4E78A6BEB4E98E900EE2F3569A1F4C /* CDCameraPreviewView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD5A6E23A1B8412C2194388BD9BC3EDA /* Pods-CDCamera_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA28D7D3C40481A89565596732D2E7A /* Pods-CDCamera_Example-dummy.m */; };
 		B213A2D18C1A387C1323F03335AFE18B /* Pods-CDCamera_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1716CA342CD3C648B6CB6E27E7A53A5 /* Pods-CDCamera_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B238A777C58CA43CE1F00E45E6D97457 /* Pods-CDCamera_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 300EFE3A89D4AF39DE9BBA5CD7D8C831 /* Pods-CDCamera_Tests-dummy.m */; };
-		B5950577E13287CD0A780B6396325335 /* CDPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F367EF585DC8004F8B05442FDD9753 /* CDPhotoViewController.m */; };
-		C446719395EFDC0257B65D02548E9BB5 /* CDCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F788C0455A5AE4B9B155F9132F36D13 /* CDCameraButton.m */; };
+		B310BEF32066EB5BFDD760ECF647A4A0 /* UIImage+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A85E08CE04005D867E3675342C828E /* UIImage+Crop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B359C8EB8BB7B17D62588B5FF53C05E0 /* CALayer+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 12EC9CA6DB9A9054F186AFCEB52EC9E6 /* CALayer+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5161A526F9AE0E02A2739F1B6C3C40A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B7BF1F58FE93B6F190A664ABC758F760 /* CDCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968CD7D35F13CD0B4E0C3C08995DE7BD /* CDCameraViewController.m */; };
+		BF5B3B51F5DB8E9D81F633F620CA726E /* CDCamera_en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73612AD6B7C5157228CB31FD6BB22D96 /* CDCamera_en.strings */; };
+		C72AA021DA55D428FE7D678522138706 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = C754267FBA14A04C4458E3CC48FEE62C /* UIImage+Crop.m */; };
+		CD0BF7B33668F9741CB91CF5ACC77027 /* CDPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D478BE6B9346F37646B036BF00C83A2 /* CDPhotoViewController.m */; };
 		D346D641D7859059B3BC80FDF55AA472 /* Pods-CDCamera_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C368474403760B91CF41ADD720E5E8C9 /* Pods-CDCamera_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E080A8ADA47B5E02F33387C9608FC0DB /* CDCameraViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CF336C9AC103CF15FB01212F3CCF4E3 /* CDCameraViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E14BF2F1734B39C979960DB5E9F4FAD8 /* CDCamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B20EB337934CC18E230D665F73DE623 /* CDCamera.storyboard */; };
-		F86B9F3E5F11B1BF4C936777611338C8 /* UIImage+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = F8F03BFBCF76F4AC37AA3C05240D385F /* UIImage+Crop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC122635BA0A70B31BAA58DC11703D1B /* CDCameraPreviewView.h in Headers */ = {isa = PBXBuildFile; fileRef = 651DFC32E57EF5B23406DB57448AF6FB /* CDCameraPreviewView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDBAC4D245227E3305917765125AE721 /* CDPhotoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB67A68E46BAEEFEFE617D37EF08F1C /* CDPhotoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE7321D0AE134B3376186AA6F4971A0B /* CDCameraCounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5562A2268E890532BD37A57554A26B5B /* CDCameraCounterView.xib */; };
+		EE5E93D1E1F7FF2451A19E66777C25A0 /* CDCameraViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A2FE11594A1AD347EB2190A89348A1 /* CDCameraViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFEC930B3020A988265E32490D9325CD /* CDCamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6F58AECDC23CABF42431EA2A8DBED5 /* CDCamera.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,76 +45,68 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C12581943C85EC7E7445BCCE6792ABDE;
+			remoteGlobalIDString = 06E145804F6D01843EFEBA0FEBD62382;
 			remoteInfo = CDCamera;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0BC0B203D1DAE0BBA2CFD27FFA249CB2 /* Pods-CDCamera_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDCamera_Example-frameworks.sh"; sourceTree = "<group>"; };
-		0C083B4F4FA44C5170A9D0B303961EF6 /* CDCameraType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDCameraType.h; sourceTree = "<group>"; };
-		0DEC926DC7590C378261F8F6646BA648 /* Pods_CDCamera_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDCamera_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D478BE6B9346F37646B036BF00C83A2 /* CDPhotoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDPhotoViewController.m; sourceTree = "<group>"; };
+		0DEC926DC7590C378261F8F6646BA648 /* Pods_CDCamera_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CDCamera_Tests.framework; path = "Pods-CDCamera_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12EC9CA6DB9A9054F186AFCEB52EC9E6 /* CALayer+Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+Utils.h"; sourceTree = "<group>"; };
 		1C230C8238804C8BABC48B97AE63C8E1 /* Pods-CDCamera_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDCamera_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		23114B7271FF7DDF2971F655AC8C5BE8 /* CDCameraViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDCameraViewController.m; sourceTree = "<group>"; };
-		234A70B5DBB075430DB5B81E701EB446 /* Pods-CDCamera_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CDCamera_Tests.modulemap"; sourceTree = "<group>"; };
-		24D81B8EEAA8657AE368A1F923256F57 /* CDCamera_en.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = CDCamera_en.strings; sourceTree = "<group>"; };
+		1F4E78A6BEB4E98E900EE2F3569A1F4C /* CDCameraPreviewView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDCameraPreviewView.h; sourceTree = "<group>"; };
+		234A70B5DBB075430DB5B81E701EB446 /* Pods-CDCamera_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CDCamera_Tests.modulemap"; sourceTree = "<group>"; };
+		268D525F2FFF12700A474422AA5F201E /* CDCameraPreviewView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDCameraPreviewView.m; sourceTree = "<group>"; };
 		294818DCC41DAA86272E75EC12630168 /* Pods-CDCamera_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDCamera_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2EA28D7D3C40481A89565596732D2E7A /* Pods-CDCamera_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CDCamera_Example-dummy.m"; sourceTree = "<group>"; };
+		2FF051CCDC49AFB19BE6A8AE8860C407 /* CDCameraCounterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDCameraCounterView.h; sourceTree = "<group>"; };
 		300EFE3A89D4AF39DE9BBA5CD7D8C831 /* Pods-CDCamera_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CDCamera_Tests-dummy.m"; sourceTree = "<group>"; };
-		34D3FB7008A5959A2D53C840C50A3859 /* CALayer+Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Utils.m"; sourceTree = "<group>"; };
-		35269CF9DC4CE83F090D7AB7CE212AEB /* CDVideoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDVideoViewController.h; sourceTree = "<group>"; };
-		3531016C1EE1CAEB00191D36 /* CDCameraCounterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCameraCounterView.h; sourceTree = "<group>"; };
-		3531016D1EE1CAEB00191D36 /* CDCameraCounterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCameraCounterView.m; sourceTree = "<group>"; };
-		353101701EE1CB2E00191D36 /* CDCameraCounterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDCameraCounterView.xib; sourceTree = "<group>"; };
 		359741A9062ADE03EE6E36DD6AFBA277 /* CDCamera-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDCamera-prefix.pch"; sourceTree = "<group>"; };
 		36839FDDFEDD939D5EA9E946D2CE5A8D /* Pods-CDCamera_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDCamera_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		38086C4C24C6AA8DA61D5A3208201C44 /* CDCameraCounterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDCameraCounterView.m; sourceTree = "<group>"; };
+		3AAF144EB2475BBA56B3E57AF975B72F /* CDCameraButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDCameraButton.m; sourceTree = "<group>"; };
 		3FC095E82B71D7461A96B2485AF438B2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44866CB1D459F47645132CD0699C8CCA /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45406BD97F94E3C31927E8EB367A1057 /* CDCameraType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDCameraType.h; sourceTree = "<group>"; };
 		46137E500009933C32E2D614A2AE9788 /* CDCamera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDCamera-umbrella.h"; sourceTree = "<group>"; };
 		47425AFA2EB214ABA45742B6087EA476 /* Pods-CDCamera_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CDCamera_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4B20EB337934CC18E230D665F73DE623 /* CDCamera.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = CDCamera.storyboard; sourceTree = "<group>"; };
-		51F367EF585DC8004F8B05442FDD9753 /* CDPhotoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDPhotoViewController.m; sourceTree = "<group>"; };
 		53390F65B73EC94F697D8A66311172AB /* Pods-CDCamera_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDCamera_Example-resources.sh"; sourceTree = "<group>"; };
-		5FC3E8B82D5EC31D7F24F8D637EEAF29 /* CDCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CDCamera.modulemap; sourceTree = "<group>"; };
-		615D712E5570209D810628DA0B2817D7 /* CDCamera_es.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = CDCamera_es.strings; sourceTree = "<group>"; };
+		5562A2268E890532BD37A57554A26B5B /* CDCameraCounterView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CDCameraCounterView.xib; sourceTree = "<group>"; };
+		5FC3E8B82D5EC31D7F24F8D637EEAF29 /* CDCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CDCamera.modulemap; sourceTree = "<group>"; };
 		6314E556CDD62627D12C37B628EB7545 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		647513F30DBE91492B8211D55B5B7560 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		651DFC32E57EF5B23406DB57448AF6FB /* CDCameraPreviewView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDCameraPreviewView.h; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6CF336C9AC103CF15FB01212F3CCF4E3 /* CDCameraViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDCameraViewController.h; sourceTree = "<group>"; };
 		6DEC599BDB0EF37599AB4E22017C8485 /* CDCamera.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDCamera.xcconfig; sourceTree = "<group>"; };
-		71E58CDFFCE25A7D77915D70B1CAA894 /* CDCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CDCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AB67A68E46BAEEFEFE617D37EF08F1C /* CDPhotoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDPhotoViewController.h; sourceTree = "<group>"; };
+		71E58CDFFCE25A7D77915D70B1CAA894 /* CDCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CDCamera.framework; path = CDCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73612AD6B7C5157228CB31FD6BB22D96 /* CDCamera_en.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = CDCamera_en.strings; sourceTree = "<group>"; };
+		74A85E08CE04005D867E3675342C828E /* UIImage+Crop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
+		78560D486B5D587FC650B0E35385C9AB /* CDCamera_es.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = CDCamera_es.strings; sourceTree = "<group>"; };
 		7B86E111B5E97FADD22E385E2F73393C /* Pods-CDCamera_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDCamera_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		7F788C0455A5AE4B9B155F9132F36D13 /* CDCameraButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDCameraButton.m; sourceTree = "<group>"; };
 		8084311DA2409D23755C2ECB7E5BAF49 /* Pods-CDCamera_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDCamera_Tests-resources.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		976CDB86EB85FA2656DF5039311FAB21 /* CDVideoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDVideoViewController.m; sourceTree = "<group>"; };
-		A28EE13C054E971F3D3211F011D82952 /* Pods_CDCamera_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDCamera_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95F800AECE1D7EBBD8617C530F7175E3 /* CALayer+Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Utils.m"; sourceTree = "<group>"; };
+		968CD7D35F13CD0B4E0C3C08995DE7BD /* CDCameraViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDCameraViewController.m; sourceTree = "<group>"; };
+		9CC907DF80DB1D11F3614E52F9B26225 /* CDVideoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDVideoViewController.h; sourceTree = "<group>"; };
+		A28EE13C054E971F3D3211F011D82952 /* Pods_CDCamera_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CDCamera_Example.framework; path = "Pods-CDCamera_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A785ADED7DA021A0F3217B9DB1FF3766 /* CDCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDCamera-dummy.m"; sourceTree = "<group>"; };
-		B8C055B004A2CE722073EEF8F9582397 /* CDCameraButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDCameraButton.h; sourceTree = "<group>"; };
-		BB455F8CC4499441818E7348BE770F5D /* Pods-CDCamera_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CDCamera_Example.modulemap"; sourceTree = "<group>"; };
-		BEE7AFD81E405F8A1C514D1FCC4ABAF4 /* UIImage+Crop.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
-		BFFE5FE3084616CFE8F41C1FD71F81FE /* CDCameraPreviewView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDCameraPreviewView.m; sourceTree = "<group>"; };
+		AF9AAE84D08608C501C1E722398D7C3A /* CDPhotoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDPhotoViewController.h; sourceTree = "<group>"; };
+		BB455F8CC4499441818E7348BE770F5D /* Pods-CDCamera_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CDCamera_Example.modulemap"; sourceTree = "<group>"; };
 		C2E6DD8A209A4C8C5D5117E5BA2E2C3E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C368474403760B91CF41ADD720E5E8C9 /* Pods-CDCamera_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CDCamera_Example-umbrella.h"; sourceTree = "<group>"; };
+		C754267FBA14A04C4458E3CC48FEE62C /* UIImage+Crop.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
+		CE6F58AECDC23CABF42431EA2A8DBED5 /* CDCamera.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = CDCamera.storyboard; sourceTree = "<group>"; };
 		DE823EA1DFFBDD70F640CCDD63A968DE /* Pods-CDCamera_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDCamera_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1716CA342CD3C648B6CB6E27E7A53A5 /* Pods-CDCamera_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CDCamera_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E2A2FE11594A1AD347EB2190A89348A1 /* CDCameraViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDCameraViewController.h; sourceTree = "<group>"; };
+		E72630BA9D506870CCCE7C3CFED4F6A9 /* CDCameraButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDCameraButton.h; sourceTree = "<group>"; };
+		E93157D789521013B26E7C61219AE78B /* CDVideoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDVideoViewController.m; sourceTree = "<group>"; };
 		E9C5CDEC790A35797B737C141A351F35 /* Pods-CDCamera_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDCamera_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB9D88918DB6FB7CD272378EDBA42B5E /* Pods-CDCamera_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDCamera_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F49A68091156979FF072FA11B84AB447 /* Pods-CDCamera_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CDCamera_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F4AC46A897588B42702887306DBB5C3A /* CALayer+Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+Utils.h"; sourceTree = "<group>"; };
-		F8F03BFBCF76F4AC37AA3C05240D385F /* UIImage+Crop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4729E4A1A070B7AF28A18F4438962690 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14F63F8DC42ACA292C47568D44552797 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DD81F4A5878AF41CD137D909F0B7A7D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,25 +123,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EEFCC94D16B8A5E741506D57A8B69D92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5161A526F9AE0E02A2739F1B6C3C40A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B8C6C0B9918FE7A50409312FE82675B /* Categories */ = {
+		288A0F2EEC2C996320609B04D580678A /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				F4AC46A897588B42702887306DBB5C3A /* CALayer+Utils.h */,
-				34D3FB7008A5959A2D53C840C50A3859 /* CALayer+Utils.m */,
-				F8F03BFBCF76F4AC37AA3C05240D385F /* UIImage+Crop.h */,
-				BEE7AFD81E405F8A1C514D1FCC4ABAF4 /* UIImage+Crop.m */,
+				E72630BA9D506870CCCE7C3CFED4F6A9 /* CDCameraButton.h */,
+				3AAF144EB2475BBA56B3E57AF975B72F /* CDCameraButton.m */,
 			);
-			path = Categories;
+			name = Buttons;
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		2ABE115E83C1637AF957AC77E33AD31F /* CDCamera */ = {
 			isa = PBXGroup;
 			children = (
-				8CD1A0B845A30A1B5A3F4BD74D75048D /* Assets */,
+				7B551F2FD728375B88C118897D0F1A97 /* Assets */,
 			);
+			name = CDCamera;
 			path = CDCamera;
 			sourceTree = "<group>";
 		};
@@ -161,6 +161,18 @@
 				0DEC926DC7590C378261F8F6646BA648 /* Pods_CDCamera_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4BCDD232E006F92A84D62A93FCE7ACF7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				12EC9CA6DB9A9054F186AFCEB52EC9E6 /* CALayer+Utils.h */,
+				95F800AECE1D7EBBD8617C530F7175E3 /* CALayer+Utils.m */,
+				74A85E08CE04005D867E3675342C828E /* UIImage+Crop.h */,
+				C754267FBA14A04C4458E3CC48FEE62C /* UIImage+Crop.m */,
+			);
+			name = Categories;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		4BF4544F5A040E9CC8A66378A8B948F0 /* Pods-CDCamera_Tests */ = {
@@ -181,17 +193,30 @@
 			path = "Target Support Files/Pods-CDCamera_Tests";
 			sourceTree = "<group>";
 		};
-		6A3B4F912D3BF1FAF6787D501859A20D /* ViewControllers */ = {
+		5DA698D3C5514311A436D4E731F3D5AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6CF336C9AC103CF15FB01212F3CCF4E3 /* CDCameraViewController.h */,
-				23114B7271FF7DDF2971F655AC8C5BE8 /* CDCameraViewController.m */,
-				7AB67A68E46BAEEFEFE617D37EF08F1C /* CDPhotoViewController.h */,
-				51F367EF585DC8004F8B05442FDD9753 /* CDPhotoViewController.m */,
-				35269CF9DC4CE83F090D7AB7CE212AEB /* CDVideoViewController.h */,
-				976CDB86EB85FA2656DF5039311FAB21 /* CDVideoViewController.m */,
+				2FF051CCDC49AFB19BE6A8AE8860C407 /* CDCameraCounterView.h */,
+				38086C4C24C6AA8DA61D5A3208201C44 /* CDCameraCounterView.m */,
+				1F4E78A6BEB4E98E900EE2F3569A1F4C /* CDCameraPreviewView.h */,
+				268D525F2FFF12700A474422AA5F201E /* CDCameraPreviewView.m */,
+				288A0F2EEC2C996320609B04D580678A /* Buttons */,
 			);
-			path = ViewControllers;
+			name = Views;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7B551F2FD728375B88C118897D0F1A97 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				44866CB1D459F47645132CD0699C8CCA /* Assets.xcassets */,
+				CE6F58AECDC23CABF42431EA2A8DBED5 /* CDCamera.storyboard */,
+				73612AD6B7C5157228CB31FD6BB22D96 /* CDCamera_en.strings */,
+				78560D486B5D587FC650B0E35385C9AB /* CDCamera_es.strings */,
+				5562A2268E890532BD37A57554A26B5B /* CDCameraCounterView.xib */,
+			);
+			name = Assets;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -203,18 +228,6 @@
 				2D24A799456F1E3928893A754AD3EED3 /* Products */,
 				C1BD1CC4EA9DEFD1B21FA35F2E9268B2 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		8CD1A0B845A30A1B5A3F4BD74D75048D /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				647513F30DBE91492B8211D55B5B7560 /* Assets.xcassets */,
-				4B20EB337934CC18E230D665F73DE623 /* CDCamera.storyboard */,
-				24D81B8EEAA8657AE368A1F923256F57 /* CDCamera_en.strings */,
-				615D712E5570209D810628DA0B2817D7 /* CDCamera_es.strings */,
-				353101701EE1CB2E00191D36 /* CDCameraCounterView.xib */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		A23E993DEBB68426DD1681038D8A48AB /* Development Pods */ = {
@@ -251,6 +264,18 @@
 			path = "Target Support Files/Pods-CDCamera_Example";
 			sourceTree = "<group>";
 		};
+		BB4CFE35FB54ED5CF8AB0C87B3399174 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				45406BD97F94E3C31927E8EB367A1057 /* CDCameraType.h */,
+				4BCDD232E006F92A84D62A93FCE7ACF7 /* Categories */,
+				C2060B8FB46BB8DF13050523A0D09777 /* ViewControllers */,
+				5DA698D3C5514311A436D4E731F3D5AB /* Views */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,8 +287,9 @@
 		BEC62CF7BC6A0F63DD3F3BA5D7CD1BE9 /* CDCamera */ = {
 			isa = PBXGroup;
 			children = (
-				DE411EC29FAF667728E7F60E10399212 /* Classes */,
+				BB4CFE35FB54ED5CF8AB0C87B3399174 /* Classes */,
 			);
+			name = CDCamera;
 			path = CDCamera;
 			sourceTree = "<group>";
 		};
@@ -290,13 +316,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		CB0962D3E5173CA9B66542C5CC3D1A73 /* Buttons */ = {
+		C2060B8FB46BB8DF13050523A0D09777 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B8C055B004A2CE722073EEF8F9582397 /* CDCameraButton.h */,
-				7F788C0455A5AE4B9B155F9132F36D13 /* CDCameraButton.m */,
+				E2A2FE11594A1AD347EB2190A89348A1 /* CDCameraViewController.h */,
+				968CD7D35F13CD0B4E0C3C08995DE7BD /* CDCameraViewController.m */,
+				AF9AAE84D08608C501C1E722398D7C3A /* CDPhotoViewController.h */,
+				0D478BE6B9346F37646B036BF00C83A2 /* CDPhotoViewController.m */,
+				9CC907DF80DB1D11F3614E52F9B26225 /* CDVideoViewController.h */,
+				E93157D789521013B26E7C61219AE78B /* CDVideoViewController.m */,
 			);
-			path = Buttons;
+			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -305,29 +336,6 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		DE411EC29FAF667728E7F60E10399212 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				1B8C6C0B9918FE7A50409312FE82675B /* Categories */,
-				6A3B4F912D3BF1FAF6787D501859A20D /* ViewControllers */,
-				E12B0F40650425A7FF2BDA7E13861390 /* Views */,
-				0C083B4F4FA44C5170A9D0B303961EF6 /* CDCameraType.h */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		E12B0F40650425A7FF2BDA7E13861390 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CB0962D3E5173CA9B66542C5CC3D1A73 /* Buttons */,
-				651DFC32E57EF5B23406DB57448AF6FB /* CDCameraPreviewView.h */,
-				BFFE5FE3084616CFE8F41C1FD71F81FE /* CDCameraPreviewView.m */,
-				3531016C1EE1CAEB00191D36 /* CDCameraCounterView.h */,
-				3531016D1EE1CAEB00191D36 /* CDCameraCounterView.m */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		F3C17B9B45BB10113AF69214D815C4EB /* CDCamera */ = {
@@ -352,20 +360,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		511A3DE47AF0135B0B94EE3D94635330 /* Headers */ = {
+		B12B33F7D4C95B60DA2997C6A5E1A59C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD6130A271A27CE01DC7897CC0AC6A5 /* CALayer+Utils.h in Headers */,
-				74921A59BCC564BCDCF6AFA79C56F781 /* CDCamera-umbrella.h in Headers */,
-				0609F293C08040434FC00CCDA0F75AF2 /* CDCameraButton.h in Headers */,
-				FC122635BA0A70B31BAA58DC11703D1B /* CDCameraPreviewView.h in Headers */,
-				130136FF31842BE6B289F16887330730 /* CDCameraType.h in Headers */,
-				E080A8ADA47B5E02F33387C9608FC0DB /* CDCameraViewController.h in Headers */,
-				FDBAC4D245227E3305917765125AE721 /* CDPhotoViewController.h in Headers */,
-				6688DEEFF17BB55AC4D21643A6B72F33 /* CDVideoViewController.h in Headers */,
-				3531016E1EE1CAEB00191D36 /* CDCameraCounterView.h in Headers */,
-				F86B9F3E5F11B1BF4C936777611338C8 /* UIImage+Crop.h in Headers */,
+				B359C8EB8BB7B17D62588B5FF53C05E0 /* CALayer+Utils.h in Headers */,
+				6DB540F901AADFD30A0F9028613A7179 /* CDCamera-umbrella.h in Headers */,
+				0AB8DECC65C43C5686C53EE2D3053D13 /* CDCameraButton.h in Headers */,
+				01A21B9BC63E0B22FF455A71B19FF0EB /* CDCameraCounterView.h in Headers */,
+				A9DB061F200E3B2A53C8C90E229695DC /* CDCameraPreviewView.h in Headers */,
+				28627F61F36FBFDD4513A8312731DEB2 /* CDCameraType.h in Headers */,
+				EE5E93D1E1F7FF2451A19E66777C25A0 /* CDCameraViewController.h in Headers */,
+				86F8D2ADA258C106C0A9ADFE01D9CD6F /* CDPhotoViewController.h in Headers */,
+				67B589F318F1AFCE275B2668985D9CB8 /* CDVideoViewController.h in Headers */,
+				B310BEF32066EB5BFDD760ECF647A4A0 /* UIImage+Crop.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +388,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		06E145804F6D01843EFEBA0FEBD62382 /* CDCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8E962E07C12E485E4F09D29E30ADB80 /* Build configuration list for PBXNativeTarget "CDCamera" */;
+			buildPhases = (
+				0DD8048567A4028CD750117ADB82E407 /* Sources */,
+				EEFCC94D16B8A5E741506D57A8B69D92 /* Frameworks */,
+				B12B33F7D4C95B60DA2997C6A5E1A59C /* Headers */,
+				D0B7CE89C98AC0DE48181111315DCF06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CDCamera;
+			productName = CDCamera;
+			productReference = 71E58CDFFCE25A7D77915D70B1CAA894 /* CDCamera.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		B755CAD525D89748BC119AF2946DC861 /* Pods-CDCamera_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F5B5A50DD7E1C10EAECD21FD41D1D79 /* Build configuration list for PBXNativeTarget "Pods-CDCamera_Example" */;
@@ -396,24 +422,6 @@
 			name = "Pods-CDCamera_Example";
 			productName = "Pods-CDCamera_Example";
 			productReference = A28EE13C054E971F3D3211F011D82952 /* Pods_CDCamera_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C12581943C85EC7E7445BCCE6792ABDE /* CDCamera */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0691FCA8B1F54AEB53D7A034E1742BA8 /* Build configuration list for PBXNativeTarget "CDCamera" */;
-			buildPhases = (
-				95FDE21ECD38325A6B2C12466C7DF87E /* Sources */,
-				4729E4A1A070B7AF28A18F4438962690 /* Frameworks */,
-				511A3DE47AF0135B0B94EE3D94635330 /* Headers */,
-				3B119DC2F8FAEE2253451C59EED7DAE6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CDCamera;
-			productName = CDCamera;
-			productReference = 71E58CDFFCE25A7D77915D70B1CAA894 /* CDCamera.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F6D9C4279C87B8C327385C15F16FC2EF /* Pods-CDCamera_Tests */ = {
@@ -454,7 +462,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C12581943C85EC7E7445BCCE6792ABDE /* CDCamera */,
+				06E145804F6D01843EFEBA0FEBD62382 /* CDCamera */,
 				B755CAD525D89748BC119AF2946DC861 /* Pods-CDCamera_Example */,
 				F6D9C4279C87B8C327385C15F16FC2EF /* Pods-CDCamera_Tests */,
 			);
@@ -462,34 +470,34 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3B119DC2F8FAEE2253451C59EED7DAE6 /* Resources */ = {
+		D0B7CE89C98AC0DE48181111315DCF06 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A62EA2D13AB21F29CE76AEE877BA1040 /* Assets.xcassets in Resources */,
-				E14BF2F1734B39C979960DB5E9F4FAD8 /* CDCamera.storyboard in Resources */,
-				4180FD4529D35AE6715203E4E23A1C2F /* CDCamera_en.strings in Resources */,
-				1EACCE472B9F86015C090A4C3EA0A249 /* CDCamera_es.strings in Resources */,
-				353101711EE1CB2E00191D36 /* CDCameraCounterView.xib in Resources */,
+				1A072A9E8817CFBB0DAB137361090412 /* Assets.xcassets in Resources */,
+				EFEC930B3020A988265E32490D9325CD /* CDCamera.storyboard in Resources */,
+				BF5B3B51F5DB8E9D81F633F620CA726E /* CDCamera_en.strings in Resources */,
+				A524072C49BBAC3C4CF848D43ACFA2C8 /* CDCamera_es.strings in Resources */,
+				DE7321D0AE134B3376186AA6F4971A0B /* CDCameraCounterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		95FDE21ECD38325A6B2C12466C7DF87E /* Sources */ = {
+		0DD8048567A4028CD750117ADB82E407 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3709B9B932B90CD245B6FA399A04C55F /* CALayer+Utils.m in Sources */,
-				0D4A75E1875FDBB4D354D9E9A3811F0A /* CDCamera-dummy.m in Sources */,
-				C446719395EFDC0257B65D02548E9BB5 /* CDCameraButton.m in Sources */,
-				89D8AAAF078AA89B1B792DD1D483E0C9 /* CDCameraPreviewView.m in Sources */,
-				3531016F1EE1CAEB00191D36 /* CDCameraCounterView.m in Sources */,
-				6BC61AADB1CBF954645C9E11AE70DF56 /* CDCameraViewController.m in Sources */,
-				B5950577E13287CD0A780B6396325335 /* CDPhotoViewController.m in Sources */,
-				99F1E661E19CD51E0293884F1D37A4DB /* CDVideoViewController.m in Sources */,
-				A5AE74102D8BB1268F22E63C040C3A5E /* UIImage+Crop.m in Sources */,
+				9890DF1A1568235A9A90D1D19A3FC076 /* CALayer+Utils.m in Sources */,
+				68605144C7E89ADC6243B666C4C3FDB2 /* CDCamera-dummy.m in Sources */,
+				29C62552008DAE01A97FF4C330843354 /* CDCameraButton.m in Sources */,
+				5F3FB43CBF48F972BEEC95985B81A844 /* CDCameraCounterView.m in Sources */,
+				8D780E6F4617AA000EA75A64CFD60F62 /* CDCameraPreviewView.m in Sources */,
+				B7BF1F58FE93B6F190A664ABC758F760 /* CDCameraViewController.m in Sources */,
+				CD0BF7B33668F9741CB91CF5ACC77027 /* CDPhotoViewController.m in Sources */,
+				7A3AE47D4E6CE03E5F813777970D725D /* CDVideoViewController.m in Sources */,
+				C72AA021DA55D428FE7D678522138706 /* UIImage+Crop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +523,7 @@
 		DEF736531D737472628315FA8F474F0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CDCamera;
-			target = C12581943C85EC7E7445BCCE6792ABDE /* CDCamera */;
+			target = 06E145804F6D01843EFEBA0FEBD62382 /* CDCamera */;
 			targetProxy = 21D3F1791FF099F6E74006FAD47A78D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -562,6 +570,38 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BF8C04436ACB1544888E749A203974E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DEC599BDB0EF37599AB4E22017C8485 /* CDCamera.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CDCamera/CDCamera-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDCamera/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CDCamera/CDCamera.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CDCamera;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -673,38 +713,6 @@
 			};
 			name = Release;
 		};
-		899DCA2E6764604353178C947AE1B988 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DEC599BDB0EF37599AB4E22017C8485 /* CDCamera.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CDCamera/CDCamera-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CDCamera/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CDCamera/CDCamera.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = CDCamera;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		C104F7F091290C3D1E248192F07FE689 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -753,7 +761,7 @@
 			};
 			name = Debug;
 		};
-		D9389516737F61DCD9299DA3ADFCC8D6 /* Release */ = {
+		DB0AA8E70DCB89AD8F94B96F8EBEDE47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6DEC599BDB0EF37599AB4E22017C8485 /* CDCamera.xcconfig */;
 			buildSettings = {
@@ -762,7 +770,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -775,7 +783,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CDCamera/CDCamera.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = CDCamera;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -783,7 +791,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		E9B8125C6B641B3B8226EB69B23D6304 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -824,15 +832,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0691FCA8B1F54AEB53D7A034E1742BA8 /* Build configuration list for PBXNativeTarget "CDCamera" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				899DCA2E6764604353178C947AE1B988 /* Debug */,
-				D9389516737F61DCD9299DA3ADFCC8D6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -856,6 +855,15 @@
 			buildConfigurations = (
 				7D729C4BC8506808CF6DE9052FC5FEAD /* Debug */,
 				81729524B1AE0C479D27C9BAD59A249B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8E962E07C12E485E4F09D29E30ADB80 /* Build configuration list for PBXNativeTarget "CDCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB0AA8E70DCB89AD8F94B96F8EBEDE47 /* Debug */,
+				4BF8C04436ACB1544888E749A203974E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
