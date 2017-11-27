@@ -10,6 +10,6 @@
 
 @interface UIImage (Crop)
 
-- (UIImage *) applyAspectFillInRect: (CGRect) bounds;
+- (UIImage *)applyAspectFillInRect:(CGRect)bounds;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "CDViewController.h"
 #import <CDCamera/CDCameraViewController.h>
+#import "ParentViewController.h"
 
 @interface CDViewController () <CDCameraViewControllerDelegate>
 
@@ -22,9 +23,13 @@
 }
 
 - (IBAction)showTapped:(id)sender {
-    CDCameraViewController *cameraController = [CDCameraViewController instanceWithType:kCDCameraTypeVideo maxDuration:60.0];
+    ParentViewController *cameraController = [ParentViewController instanceWithType:kCDCameraTypePhoto maxDuration:60.0];
     cameraController.delegate = self;
     [self presentViewController:cameraController animated:YES completion:nil];
+    
+//    CDCameraViewController *cameraController = [CDCameraViewController instanceWithType:kCDCameraTypeVideo maxDuration:60.0];
+//    cameraController.delegate = self;
+//    [self presentViewController:cameraController animated:YES completion:nil];
 }
 
 #pragma mark - CDCameraViewControllerDelegate
@@ -34,11 +39,11 @@
 }
 
 - (void)cameraController:(CDCameraViewController *)controller didSelectVideo:(NSURL *)videoUrl {
-    
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)cameraController:(CDCameraViewController *)controller didSelectPhoto:(UIImage *)image {
-    
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)cameraControllerWasInterrupted:(CDCameraViewController *)controller {

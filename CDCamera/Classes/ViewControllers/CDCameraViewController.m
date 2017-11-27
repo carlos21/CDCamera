@@ -439,6 +439,9 @@ static NSString *kStoryboardName = @"CDCamera";
     struct CGDataProvider *dataProvider = CGDataProviderCreateWithCFData(cfData);
     struct CGImage *cgImage = CGImageCreateWithJPEGDataProvider(dataProvider, nil, YES, kCGRenderingIntentDefault);
     UIImage *image = [UIImage imageWithCGImage:cgImage scale:1.0 orientation:self.imageOrientation];
+    CFRelease(cfData);
+    CFRelease(dataProvider);
+    CFRelease(cgImage);
     return image;
 }
 

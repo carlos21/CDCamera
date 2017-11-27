@@ -10,16 +10,14 @@
 
 @implementation UIImage (Crop)
 
-CGRect CGRectCenteredInRect(CGRect rect, CGRect mainRect)
-{
+CGRect CGRectCenteredInRect(CGRect rect, CGRect mainRect) {
     CGFloat xOffset = CGRectGetMidX(mainRect)-CGRectGetMidX(rect);
     CGFloat yOffset = CGRectGetMidY(mainRect)-CGRectGetMidY(rect);
     return CGRectOffset(rect, xOffset, yOffset);
 }
 
 // Calculate the destination scale for filling
-CGFloat CGAspectScaleFill(CGSize sourceSize, CGRect destRect)
-{
+CGFloat CGAspectScaleFill(CGSize sourceSize, CGRect destRect) {
     CGSize destSize = destRect.size;
     CGFloat scaleW = destSize.width / sourceSize.width;
     CGFloat scaleH = destSize.height / sourceSize.height;
@@ -27,8 +25,7 @@ CGFloat CGAspectScaleFill(CGSize sourceSize, CGRect destRect)
 }
 
 
-CGRect CGRectAspectFillRect(CGSize sourceSize, CGRect destRect)
-{
+CGRect CGRectAspectFillRect(CGSize sourceSize, CGRect destRect) {
     CGSize destSize = destRect.size;
     CGFloat destScale = CGAspectScaleFill(sourceSize, destRect);
     CGFloat newWidth = sourceSize.width * destScale;
@@ -41,10 +38,8 @@ CGRect CGRectAspectFillRect(CGSize sourceSize, CGRect destRect)
 
 
 
-- (UIImage *) applyAspectFillInRect: (CGRect) bounds
-{
+- (UIImage *)applyAspectFillInRect:(CGRect)bounds {
     CGRect destRect;
-    
     UIGraphicsBeginImageContext(bounds.size);
     CGRect rect = CGRectAspectFillRect(self.size, bounds);
     destRect = CGRectCenteredInRect(rect, bounds);
@@ -53,7 +48,6 @@ CGRect CGRectAspectFillRect(CGSize sourceSize, CGRect destRect)
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
-    
 }
 
 @end
