@@ -17,6 +17,10 @@
 
 @implementation ParentViewController
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 #pragma mark - Lifecycle
 
 - (instancetype)initWithType:(kCDCameraType)cameraType maxDuration:(CGFloat)maxDuration {
@@ -30,7 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ParentViewController *cameraController = [ParentViewController instanceWithType:self.cameraType maxDuration:self.maxDuration];
+    CDCameraViewController *cameraController = [CDCameraViewController instanceWithType:self.cameraType maxDuration:self.maxDuration];
     cameraController.delegate = self.delegate;
     
     [cameraController willMoveToParentViewController:self];

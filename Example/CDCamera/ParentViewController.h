@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CDCamera/CDCameraViewController.h>
 
-@interface ParentViewController : CDCameraViewController
+@interface ParentViewController : UIViewController
+
+@property (weak, nonatomic) id<CDCameraViewControllerDelegate> delegate;
 
 - (instancetype)initWithType:(kCDCameraType)cameraType maxDuration:(CGFloat)maxDuration;
 

@@ -23,7 +23,8 @@
 }
 
 - (IBAction)showTapped:(id)sender {
-    ParentViewController *cameraController = [ParentViewController instanceWithType:kCDCameraTypePhoto maxDuration:60.0];
+    ParentViewController *cameraController = [[ParentViewController alloc] initWithType:kCDCameraTypeVideo maxDuration:60.0];
+    //CDCameraViewController *cameraController = [CDCameraViewController instanceWithType:kCDCameraTypeVideo maxDuration:60.0];
     cameraController.delegate = self;
     [self presentViewController:cameraController animated:YES completion:nil];
     

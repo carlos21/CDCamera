@@ -25,6 +25,7 @@ static NSString *kStoryboardName = @"CDCamera";
 @property (weak, nonatomic) IBOutlet UIButton *toggleFlashButton;
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (weak, nonatomic) IBOutlet UILabel *instructionsLabel;
+@property (weak, nonatomic) IBOutlet UIView *tappableView;
 @property (weak, nonatomic) IBOutlet CDCameraPreviewView *previewView;
 @property (weak, nonatomic) IBOutlet CDCameraCounterView *counterView;
 
@@ -243,11 +244,11 @@ static NSString *kStoryboardName = @"CDCamera";
 - (void)setupGestures {
     UIPinchGestureRecognizer *zoomGesture = [UIPinchGestureRecognizer new];
     [zoomGesture addTarget:self action:@selector(zoomGestureEvent:)];
-    [self.view addGestureRecognizer:zoomGesture];
+    [self.tappableView addGestureRecognizer:zoomGesture];
     
     UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleCameraTapped:)];
     doubleTapGesture.numberOfTapsRequired = 2;
-    [self.view addGestureRecognizer:doubleTapGesture];
+    [self.tappableView addGestureRecognizer:doubleTapGesture];
 }
 
 - (void)setupSession {
